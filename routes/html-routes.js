@@ -12,23 +12,21 @@ module.exports = function(app) {
 
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // index route loads view.html
-  // app.get("/", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/blog.html"));
-  // });
-
-  // // cms route loads cms.html
-  // app.get("/cms", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/cms.html"));
-  // });
-
-  // // blog route loads blog.html
-  // app.get("/blog", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/blog.html"));
-  // });
-
-  // app.get("/authors", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/author-manager.html"));
+  // index route loads index.html
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/plant.html"));
   });
+
+  // // cms route loads suvey.html
+  app.get("/survey", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/survey.html"));
+  });
+
+  // // blog route loads chat.html
+  app.get("/chat", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/chat.html"));
+  });
+
+
 
 };
