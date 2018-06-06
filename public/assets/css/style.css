@@ -1,0 +1,201 @@
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+.pre-loader {
+  -webkit-animation-name: preloader;
+  -webkit-animation-duration: 1s;
+  animation-name: preloader;
+  animation-duration: 1s;
+  animation-delay: 3.2s;
+}
+
+@-webkit-keyframes preloader {
+  from {
+    bottom: -0px;
+    opacity: 1;
+  }
+  to {
+    bottom: -100px;
+    opacity: 0;
+  }
+}
+
+@keyframes preloader {
+  from {
+    bottom: -0px;
+    opacity: 1;
+  }
+  to {
+    bottom: -100px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #222222;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 36%;
+  top: 25%;
+  width: 400px;
+  height: 400px;
+
+  z-index: 1500;
+}
+
+img {
+  width: 100%; /* or any custom size */
+  height: 100%;
+  object-fit: contain;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: auto;
+  grid-gap: 20px 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#header {
+  height: 80px;
+  top: 0;
+  background-color: rgb(87, 165, 87);
+  vertical-align: middle;
+  line-height: 80px;
+}
+
+.item {
+  height: 270px;
+  background-color: rgb(87, 165, 87);
+  transition: 0.3s;
+  vertical-align: middle;
+  line-height: 200px;
+}
+
+.item:hover {
+  opacity: 0.2;
+}
+
+.item-1 {
+  background-image: url("https://i.pinimg.com/originals/ad/22/72/ad2272dec4fa7b73b7941681cbc59aa1.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-mask-image: radial-gradient(
+    circle 10px at 100% 100%,
+    transparent 0,
+    transparent 75px,
+    black 10px
+  );
+  mask-image: radial-gradient(
+    circle 10px at 100% 100%,
+    transparent 0,
+    transparent 75px,
+    black 10px
+  );
+}
+
+.item-2 {
+  background-image: url("https://zippy.gfycat.com/CourageousChillyCrocodile.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-mask-image: radial-gradient(
+    circle 10px at 0% 100%,
+    transparent 0,
+    transparent 75px,
+    black 10px
+  );
+  mask-image: radial-gradient(
+    circle 10px at 0% 100%,
+    transparent 0,
+    transparent 75px,
+    black 10px
+  );
+}
+
+.item-3 {
+  background-image: url("https://thumbs.gfycat.com/ActiveMindlessJaguar-max-1mb.gif");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-mask-image: radial-gradient(
+    circle 10px at 100% 0%,
+    transparent 0,
+    transparent 75px,
+    black 10px
+  );
+  mask-image: radial-gradient(
+    circle 10px at 100% 0%,
+    transparent 0,
+    transparent 75px,
+    black 10px
+  );
+}
+
+.item-4 {
+  background-image: url("https://zippy.gfycat.com/TastyFantasticAmericanredsquirrel.gif");
+  background-position: center;
+  -webkit-mask-image: radial-gradient(
+    circle 10px at 0 0,
+    transparent 0,
+    transparent 75px,
+    black 10px
+  );
+  mask-image: radial-gradient(
+    circle 10px at 0 0,
+    transparent 0,
+    transparent 75px,
+    black 10px
+  );
+}
+
+h2 {
+  font-family: "Vibur", cursive;
+  margin: 0;
+}
+
+p {
+  font-family: "Josefin Slab", serif;
+}
