@@ -1,6 +1,7 @@
 #myDiv {
   display: none;
   text-align: center;
+  top: 30px;
 }
 
 .animate-bottom {
@@ -84,8 +85,25 @@
   z-index: 1500;
 }
 
+.plantDatabase {
+  position: absolute;
+  z-index: 2000;
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  right: 0;
+  bottom: 35%;
+  left: 0;
+}
+
+#h2Database {
+  position: absolute;
+  z-index: 1600;
+  margin: 50px 50px;
+}
+
 img {
-  width: 100%; /* or any custom size */
+  width: 100%;
   height: 100%;
   object-fit: contain;
 }
@@ -99,14 +117,6 @@ img {
   margin-top: 30px;
 }
 
-#header {
-  height: 80px;
-  top: 0;
-  background-color: rgb(87, 165, 87);
-  vertical-align: middle;
-  line-height: 80px;
-}
-
 .item {
   height: 270px;
   background-color: rgb(87, 165, 87);
@@ -117,6 +127,12 @@ img {
 
 .item:hover {
   opacity: 0.2;
+  cursor: pointer;
+}
+
+.plantDatabase:hover {
+  opacity: 0.2;
+  cursor: pointer;
 }
 
 .item-1 {
@@ -142,7 +158,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   -webkit-mask-image: radial-gradient(
-    circle 10px at 0% 100%,
+    circle at 0% 100%,
     transparent 0,
     transparent 75px,
     black 10px
