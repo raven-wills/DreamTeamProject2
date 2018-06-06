@@ -1,16 +1,23 @@
 module.exports = function(sequelize, DataTypes) {
-  var Plant = sequelize.define("Plant", {
-  //   // Giving the Author model a name of type STRING
-    name: DataTypes.STRING
+  var Chat = sequelize.define("Chat", {
+    body: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      len: [1]
+    }
+  }, {
+    freezeTableName: true,
   });
 
-  Plant.associate = function(models) {
-  //   // Associating Author with Posts
-  //   // When an Author is deleted, also delete any associated Posts
-    Plant.hasMany(models.Post, {
-      onDelete: "cascade"
+  Chat.associate = function(models) {
+    // We're saying that a Post should belong to an Author
+    // A Post can't be created without an Author due to the foreign key constraint
+    Chat.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
     });
   };
 
-  return Plant;
+  return Chat;
 };
