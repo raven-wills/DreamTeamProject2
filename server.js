@@ -1,8 +1,11 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+// This may be confusing but here Sequelize (capital) references the standard library
+var Sequelize = require("sequelize");
 
 // bring in the models
 var db = require("./models");
+
 
 var app = express();
 // Serve static content for the app from the "public" directory in the application directory.
@@ -15,9 +18,7 @@ app.use(bodyParser.urlencoded({
 
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({
-  defaultLayout: "main"
-}));
+app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 var routes = require("./controllers/pot_buddy");
