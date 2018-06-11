@@ -13,8 +13,17 @@ var db = require("../models");
 
   // get route -> my-garden
   router.get("/my-garden", function(req, res) {
-    return res.render("garden", {layout: 'garden'});
-  });
+    // replace old function with sequelize function
+db.Plants.findAll({ limit: 10 })
+// use promise method to pass the plants...
+.then(function(dbPlant) {
+  console.log(dbPlant);
+  // into the main index, updating the page
+  var hbsObject = { plant: dbPlant, layout: "garden" };
+  return res.render("garden", hbsObject);
+});
+  // return res.render("garden", {layout: 'garden'});
+});
 
   // get route -> chat
   router.get("/chat", function(req, res) {
