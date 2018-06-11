@@ -1,3 +1,8 @@
+body {
+  overflow-y: hidden;
+  background-color: rgb(247, 237, 222);
+}
+
 #myDiv {
   display: none;
   text-align: center;
@@ -92,7 +97,7 @@
   height: 170px;
   margin: auto;
   right: 0;
-  bottom: 35%;
+  bottom: 40%;
   left: 0;
 }
 
@@ -217,25 +222,23 @@ p {
 }
 
 /* / potbuddy login logo */
-  .plantDatabase:hover {
-    
-    opacity: 0.2;
-    cursor: pointer;
-  }
-  .plantDatabase {
-    position: absolute;
-    z-index: 2000;
-    width: 170px;
-    height: 170px;
-    margin: auto;
-    right: 0;
-    bottom: 35%;
-    left: 0;
-  }
-  
-  #h2Database {
-    position: absolute;
-    z-index: 1600;
-    margin: 50px 50px;
-  }
+.plantDatabase:hover {
+  opacity: 0.2;
+  cursor: pointer;
+}
+.plantDatabase {
+  position: absolute;
+  z-index: 2000;
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  right: 0;
+  bottom: 35%;
+  left: 0;
+}
 
+#h2Database {
+  position: absolute;
+  z-index: 1600;
+  margin: 50px 50px;
+}
