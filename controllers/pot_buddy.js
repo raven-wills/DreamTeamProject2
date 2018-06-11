@@ -16,10 +16,6 @@ router.get("/my-garden", function(req, res) {
   return res.render("garden", {layout: 'garden'});
 });
 
-
-
-
-
 // get route -> chat
 router.get("/chat", function(req, res) {
   return res.render("chat");
