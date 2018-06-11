@@ -1,4 +1,3 @@
-
 DROP DATABASE IF EXISTS plants_b1;
 
 CREATE DATABASE plants_b1;
