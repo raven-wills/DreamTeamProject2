@@ -76,11 +76,10 @@
 #loader {
   display: block;
   position: relative;
-  left: 36%;
+  left: calc(50vw - 150px); /* Centers cactus for all screen sizes */
   top: 25%;
   width: 400px;
   height: 400px;
-
   z-index: 1500;
 }
 

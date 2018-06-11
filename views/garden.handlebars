@@ -1,109 +1,64 @@
-{{!--
-<div class="container-header" id="garden">
+ {{!--
+<ul>
+    {{#each myPlant}}
+    <li>
+        <p>Common Name: {{commonName}}</p>
+        <p>Scientific Name: {{scientificName}}</p>
+        <p>Watering: {{water}}</p>
+    </li>
+    {{/each}}
+</ul> --}}
 
-    <h1>My Garden!</h1>
 
-</div>
-
-<hr>
-
-<div class="container-content" id="garden">
+<div class="section" id="section1">
 
 
-    <div class="row">
-        <div class="col s12 m7">
-            <div class="card">
-                <div class="card-image">
-                    <img src="../public/assets/images/faviCacti.png">
-                    <span class="card-title">Testing Cart Title</span>
-                </div>
+
+    {{!-- {{#each myPlant}} --}}
+
+    <div class="col s8 m8 l8">
+        <h2 class="header"> Common Name: </h2>
+        <div class="card horizontal">
+            <div class="card-image">
+                <img src="../assets/images/faviCacti.png">
+            </div>
+            <div class="card-stacked">
                 <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
-                        require little markup to use effectively.</p>
+                    <p>Scientific Name</p>
+                    <p>Watering</p>
+                    <p>Indoor/Outdoor Plant</p>
                 </div>
 
+
+                <div class="card-action">
+                    <div class="row">
+                        <div class="col s2 m2 l1">
+                            <a class="btn-floating btn-large waves-effect waves-light green darken-1 " data-position="top" data-tooltip="Go Home" href="/">  
+                                <i class="material-icons">home</i>
+                            </a>
+                        </div>
+                
+
+        
+
+                        <div class="col s2 m2 l1">
+                            <a class="btn-floating btn-large waves-effect waves-light green darken-1" href="/create">
+                                <i class="material-icons">add</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 
-    <div class="row">
-        <div class="col s12 m7">
-            <div class="card">
-                <div class="card-image">
-                    <img src="../public/assets/images/faviCacti.png">
-                    <span class="card-title">Testing Card 2</span>
-                </div>
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
-                        require little markup to use effectively.</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col s12 m7">
-            <div class="card">
-                <div class="card-image">
-                    <img src="../public/assets/images/faviCacti.png">
-                    <span class="card-title">Testing Card 3 </span>
-                </div>
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
-                        require little markup to use effectively.</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-    {{!--
-    <ul>
-        {{#each myPlant}}
-        <li>
-            <p>Common Name: {{commonName}}</p>
-            <p>Scientific Name: {{scientificName}}</p>
-            <p>Watering: {{water}}</p>
-        </li>
-        {{/each}}
-    </ul> --}} {{!-- </div>
-
-
-<div class="container-footer " id="garden">
-
-    <h3>
-        <em>This could be a real footer or add fun fact</em>
-    </h3>
-
-</div> --}}
-
-
-<div class="section black" id="section1">
-   
-
-
-    <div class="row">
-        <div class="col s12 m8 l10">
-            <div class="card">
-                <div class="card-image">
-                    <img src="../public/assets/images/faviCacti.png">
-                    <span class="card-title">Testing Card 3 </span>
-                </div>
-                <div class="card-content card-panel teal lighten-2">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
-                        require little markup to use effectively.</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+    {{!-- {{/#each } --}}
 
     <ul class="nav">
-        <li>1</li>
+        <li>
+            <a href="#section1">1</a>
+        </li>
         <li>
             <a href="#section2">2</a>
         </li>
@@ -116,7 +71,7 @@
 
 
 
-<div class="section white" id="section2">
+<div class="section" id="section2">
     <h2>Section 2</h2>
     <p>
         A fathomless and boundless deep, There we wander, there we weep; On the hungry craving wind My Spectre follows thee behind.
@@ -133,7 +88,7 @@
     </ul>
 </div>
 
-<div class="section black" id="section3">
+<div class="section" id="section3">
     <h2>Section 3</h2>
     <p>
         He scents thy footsteps in the snow Wheresoever thou dost go, Thro' the wintry hail and rain. When wilt thou return again?
