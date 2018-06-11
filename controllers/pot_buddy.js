@@ -1,4 +1,3 @@
-
 var express = require("express");
 
 var router = express.Router();
@@ -13,7 +12,7 @@ router.get("/", function(req, res) {
 
 // get route -> my-garden
 router.get("/my-garden", function(req, res) {
-  return res.render("garden", {layout: 'garden'});
+  return res.render("garden", { layout: "garden" });
 });
 
 // get route -> chat
