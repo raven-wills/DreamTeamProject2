@@ -36,3 +36,8 @@ $(function() {
 		event.preventDefault();
 	});
 });
+// Mouse over Text
+
+$(document).ready(function(){
+  $('.tooltipped').tooltip();
+});

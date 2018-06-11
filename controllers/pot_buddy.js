@@ -16,10 +16,6 @@ router.get("/my-garden", function(req, res) {
   return res.render("garden", {layout: 'garden'});
 });
 
-
-
-
-
 // get route -> chat
 router.get("/chat", function(req, res) {
   return res.render("chat");
@@ -35,4 +31,8 @@ router.get("/badges", function(req, res) {
   return res.render("badges");
 });
 
+// get route -> chat
+router.get("/create", function(req, res) {
+  return res.render("create");
+});
 module.exports = router;

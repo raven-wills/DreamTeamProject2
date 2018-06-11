@@ -17,9 +17,21 @@
     bottom:0px;
   }
 
-.card-stacked,{
-      opacity: .5 !important;
+.card-stacked{
+      opacity: 1 !important;
+      width:600px !important;
+
   }
+
+
+
+  .material-icons{
+    font-family: "Josefin Slab", serif;
+    font-size: 20px !important;
+
+  }
+
+
   .section{
     margin:20px;
     margin-left:50px;
