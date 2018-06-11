@@ -1,0 +1,45 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+  /* font-family: "Vibur", cursive; */
+  background: rgb(106,162,95);
+}
+
+
+#messageContainer {
+  height: 400px;
+  width: auto;
+  border: 3px solid rgb(59,122,62);
+  background: rgb(219,238,228);
+  margin-top: 5vh;
+  padding: 10px 20px 10px;
+  border-radius: 10px;
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+#chatSubmit {
+  margin-top: 5vh;
+}
+
+.authorName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.postedAt {
+  font-size: 12px;
+}
+
+.messageBody {
+  margin-top: -4px;
+  margin-bottom: 2px;
+
+}
+
+.messageComplete {
+  max-width: 280px;
+  border-radius: 10px;
+}
