@@ -86,7 +86,11 @@
 img {
   width: 100%; /* or any custom size */
   height: 100%;
-  object-fit: contain;
+  z-index: 4000;
+  background-color: white;
+  border-radius: 100px;
+  box-shadow: 0 3px 7px 5px rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .container {
@@ -111,6 +115,8 @@ img {
   transition: 0.3s;
   vertical-align: middle;
   line-height: 200px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .item:hover {
@@ -121,36 +127,12 @@ img {
   background-image: url("https://i.pinimg.com/originals/ad/22/72/ad2272dec4fa7b73b7941681cbc59aa1.gif");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 100% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 100% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
 }
 
 .item-2 {
   background-image: url("https://zippy.gfycat.com/CourageousChillyCrocodile.gif");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 0% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 0% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
 }
 
 .item-3 {
@@ -158,35 +140,11 @@ img {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 100% 0%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 100% 0%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
 }
 
 .item-4 {
   background-image: url("https://zippy.gfycat.com/TastyFantasticAmericanredsquirrel.gif");
   background-position: center;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 0 0,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 0 0,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
 }
 
 h2 {
@@ -199,24 +157,22 @@ p {
 }
 
 /* / potbuddy login logo */
-  .plantDatabase:hover {
-    cursor: pointer;
-  }
-  .plantDatabase {
-    position: absolute;
-    z-index: 2000;
-    width: 170px;
-    height: 170px;
-    margin: auto;
-    right: 0;
-    bottom: 36.5%;
-    left: 0;
-  }
-  
-  #h2Database {
-    position: absolute;
-    z-index: 1600;
-    margin: 50px 50px;
-  }
+.plantDatabase:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.plantDatabase {
+  position: absolute;
+  z-index: 2000;
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  right: 0;
+  bottom: 38%;
+  left: 0;
+}
 
-
+#h2Database {
+  position: absolute;
+  z-index: 1600;
+}
