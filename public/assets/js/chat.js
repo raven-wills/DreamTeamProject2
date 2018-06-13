@@ -1,27 +1,46 @@
 $(document).ready(function() {
   // Getting jQuery references to the message body and author
   var bodyInput = $("#submitBody");
-  var authorInput = $("#submitAuthor");
+  var localUser;
   // Adding an event listener for when the form is submitted
   $("#chatSubmit").on("submit", handleFormSubmit);
 
   // Get messages upon page load
+  getUserInfo();
   getChat();
+
+  // Store current user info on client side. Set form placeholder to welcome user
+  function getUserInfo() {
+    $.get("/api/user_data", function(data) {
+      if (!data.email) {
+        console.log("not signed in");
+        bodyInput.attr("placeholder", "Please sign in to chat!");
+      } else {
+        localUser = data;
+        bodyInput.attr(
+          "placeholder",
+          "Welcome " + localUser.name + "! Type your message here."
+        );
+      }
+    });
+  }
 
   // A function for handling what happens when the form to create a new message is submitted
   function handleFormSubmit(event) {
     event.preventDefault();
-    // Won't submit the post if we are missing a body or author
-    if (!bodyInput.val().trim() || !authorInput.val()) {
+    // Won't submit the post if we are missing a body
+    if (!bodyInput.val().trim()) {
       return;
     }
     // Constructing a newMessage object to hand to the database
     var newMessage = {
       body: bodyInput.val().trim(),
-      UserId: authorInput.val()
+      UserId: localUser.id
     };
-    // Post to database, then retrieve updated view
+    // Post to database, retrieve updated view, change placeholder to standard
     $.post("/api/chat", newMessage, getChat);
+    bodyInput.attr("placeholder", "Type your message here.");
+    bodyInput.val("");
   }
 
   // A function to get and then render our list of messages

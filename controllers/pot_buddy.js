@@ -43,7 +43,7 @@ router.get("/sign-up", function (req, res) {
 // get route -> my-garden
 router.get("/my-garden", function (req, res) {
   // .findAll sequelize function
-  db.Plants.findAll()
+  db.Plants.findAll({ limit: 5 })
     // use promise method to pass the plants...
     .then(function (dbp) {
       // console.log(dbp);
@@ -57,7 +57,7 @@ router.get("/my-garden", function (req, res) {
 // get route -> plants
 router.get("/plants", function (req, res) {
   // .findAll sequelize function
-  db.Plants.findAll({ limit: 25 })
+  db.Plants.findAll({ limit: 5 })
     // use promise method to pass the plants...
     .then(function (dbp) {
       // console.log(dbp);
@@ -127,6 +127,7 @@ router.post("/api/login", passport.authenticate("local"), function (req, res) {
 router.post("/api/signup", function (req, res) {
   console.log(req.body);
   db.User.create({
+    name: req.body.name,
     email: req.body.email,
     password: req.body.password
   }).then(function () {
@@ -154,6 +155,7 @@ router.get("/api/user_data", function (req, res) {
     // Otherwise send back the user's email and id
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
+      name: req.user.name,
       email: req.user.email,
       id: req.user.id
     });
