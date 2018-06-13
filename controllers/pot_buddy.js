@@ -14,7 +14,7 @@ router.get("/", function (req, res) {
 // get route -> my-garden
 router.get("/my-garden", function (req, res) {
   // .findAll sequelize function
-  db.Plants.findAll()
+  db.Plants.findAll({ limit: 5 })
     // use promise method to pass the plants...
     .then(function (dbp) {
       // console.log(dbp);
@@ -28,7 +28,7 @@ router.get("/my-garden", function (req, res) {
 // get route -> plants
 router.get("/plants", function (req, res) {
   // .findAll sequelize function
-  db.Plants.findAll({ limit: 25 })
+  db.Plants.findAll({ limit: 5 })
     // use promise method to pass the plants...
     .then(function (dbp) {
       // console.log(dbp);
