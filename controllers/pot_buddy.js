@@ -62,7 +62,7 @@ router.get("/plants", function (req, res) {
     .then(function (dbp) {
       // console.log(dbp);
       // into the main index, updating the page
-      var hbsObject = { plant: dbp, layout: "main" };
+      var hbsObject = { plant: dbp, layout: "plants" };
       return res.render("plants", hbsObject);
     });
 
