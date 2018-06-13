@@ -9,6 +9,19 @@ $(document).ready(function() {
   getUserInfo();
   getChat();
 
+  // Store current user info on client side. Set form placeholder to welcome user
+    function getUserInfo() {
+      $.get("/api/user_data", function(data) {
+        if (!data.email) {
+          console.log("not signed in");
+          bodyInput.attr("placeholder", "Please sign in to chat!");
+        } else {
+          localUser = data;
+          bodyInput.attr("placeholder", "Welcome " + localUser.name + "! Type your message here.");
+        }
+      });
+    }
+
   // A function for handling what happens when the form to create a new message is submitted
   function handleFormSubmit(event) {
     event.preventDefault();
@@ -21,22 +34,11 @@ $(document).ready(function() {
       body: bodyInput.val().trim(),
       UserId: localUser.id
     };
-    // Post to database, then retrieve updated view
+    // Post to database, retrieve updated view, change placeholder to standard
     $.post("/api/chat", newMessage, getChat); 
+    bodyInput.attr("placeholder", "Type your message here.");
+    bodyInput.val("");
   }
-
-  function getUserInfo() {
-    $.get("/api/user_data", function(data) {
-      if (!data.email) {
-        console.log("not signed in");
-        bodyInput.attr("placeholder", "Please sign in to chat!");
-      } else {
-        localUser = data;
-        bodyInput.attr("placeholder", "Welcome " + localUser.email + "! Type your message here.");
-      }
-    });
-  }
-
   
   // A function to get and then render our list of messages
   function getChat() {
@@ -73,7 +75,7 @@ $(document).ready(function() {
   function createMessageRow(data) {
     // Create separate elements for each part of the message so that they can be individually styled
     var $message = $("<div>", {"class": "messageComplete"});
-    var $authorName = $("<span>", {"class": "authorName"}).html(data.User.email + "&nbsp;&nbsp;");
+    var $authorName = $("<span>", {"class": "authorName"}).html(data.User.name + "&nbsp;&nbsp;");
     var $postedAt = $("<span>", {"class": "postedAt"}).html(moment(data.createdAt).format("h:mm A"));
     var $messageBody = $("<div>", {"class": "messageBody"}).html(data.body);
     // Print author and time if conditions are met
