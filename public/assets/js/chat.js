@@ -32,7 +32,7 @@ $(document).ready(function() {
         bodyInput.attr("placeholder", "Please sign in to chat!");
       } else {
         localUser = data;
-        bodyInput.attr("placeholder", "Welcome " + localUser.email + "! Type your message here.");
+        bodyInput.attr("placeholder", "Welcome " + localUser.name + "! Type your message here.");
       }
     });
   }
