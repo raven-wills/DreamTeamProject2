@@ -1,12 +1,6 @@
-body {
-  overflow-y: hidden;
-  background-color: rgb(247, 237, 222);
-}
-
 #myDiv {
   display: none;
   text-align: center;
-  top: 30px;
 }
 
 .animate-bottom {
@@ -82,33 +76,15 @@ body {
 #loader {
   display: block;
   position: relative;
-  left: 36%;
+  left: calc(50vw - 150px); /* Centers cactus for all screen sizes */
   top: 25%;
   width: 400px;
   height: 400px;
-
   z-index: 1500;
 }
 
-.plantDatabase {
-  position: absolute;
-  z-index: 2000;
-  width: 170px;
-  height: 170px;
-  margin: auto;
-  right: 0;
-  bottom: 40%;
-  left: 0;
-}
-
-#h2Database {
-  position: absolute;
-  z-index: 1600;
-  margin: 50px 50px;
-}
-
 img {
-  width: 100%;
+  width: 100%; /* or any custom size */
   height: 100%;
   object-fit: contain;
 }
@@ -122,6 +98,14 @@ img {
   margin-top: 30px;
 }
 
+#header {
+  height: 80px;
+  top: 0;
+  background-color: rgb(87, 165, 87);
+  vertical-align: middle;
+  line-height: 80px;
+}
+
 .item {
   height: 270px;
   background-color: rgb(87, 165, 87);
@@ -132,12 +116,6 @@ img {
 
 .item:hover {
   opacity: 0.2;
-  cursor: pointer;
-}
-
-.plantDatabase:hover {
-  opacity: 0.2;
-  cursor: pointer;
 }
 
 .item-1 {
@@ -163,7 +141,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   -webkit-mask-image: radial-gradient(
-    circle at 0% 100%,
+    circle 10px at 0% 100%,
     transparent 0,
     transparent 75px,
     black 10px
@@ -222,23 +200,26 @@ p {
 }
 
 /* / potbuddy login logo */
-.plantDatabase:hover {
-  opacity: 0.2;
-  cursor: pointer;
-}
-.plantDatabase {
-  position: absolute;
-  z-index: 2000;
-  width: 170px;
-  height: 170px;
-  margin: auto;
-  right: 0;
-  bottom: 35%;
-  left: 0;
-}
+  .plantDatabase:hover {
+    
+    opacity: 0.2;
+    cursor: pointer;
+  }
+  .plantDatabase {
+    position: absolute;
+    z-index: 2000;
+    width: 170px;
+    height: 170px;
+    margin: auto;
+    right: 0;
+    bottom: 35%;
+    left: 0;
+  }
+  
+  #h2Database {
+    position: absolute;
+    z-index: 1600;
+    margin: 50px 50px;
+  }
 
-#h2Database {
-  position: absolute;
-  z-index: 1600;
-  margin: 50px 50px;
-}
+
