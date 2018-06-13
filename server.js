@@ -1,7 +1,12 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var session = require("express-session");
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
 
 // bring in the models
+// and setting up port
+var PORT = process.env.PORT || 3000;
 var db = require("./models");
 
 var app = express();
@@ -9,9 +14,12 @@ var app = express();
 app.use(express.static("public"));
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 var exphbs = require("express-handlebars");
 
@@ -24,8 +32,7 @@ var routes = require("./controllers/pot_buddy");
 
 app.use(routes);
 
-// listen on port 3000
-var PORT = process.env.PORT || 3000;
+
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync().then(function() {
