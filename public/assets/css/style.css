@@ -111,10 +111,12 @@ img {
   transition: 0.3s;
   vertical-align: middle;
   line-height: 200px;
+  border-radius: 5px;
 }
 
 .item:hover {
   opacity: 0.2;
+  cursor: pointer;
 }
 
 .item-1 {
@@ -209,14 +211,13 @@ p {
     height: 170px;
     margin: auto;
     right: 0;
-    bottom: 36.5%;
+    bottom: calc(50vh - 85px);;
     left: 0;
   }
   
   #h2Database {
     position: absolute;
     z-index: 1600;
-    margin: 50px 50px;
   }
 
 
