@@ -12,8 +12,8 @@ $(document).ready(function() {
   // A function for handling what happens when the form to create a new message is submitted
   function handleFormSubmit(event) {
     event.preventDefault();
-    // Won't submit the post if we are missing a body or author
-    if (!bodyInput.val().trim() || !authorInput.val()) {
+    // Won't submit the post if we are missing a body
+    if (!bodyInput.val().trim()) {
       return;
     }
     // Constructing a newMessage object to hand to the database
@@ -27,7 +27,7 @@ $(document).ready(function() {
 
   function getUserInfo() {
     $.get("/api/user_data", function(data) {
-      if (!data) {
+      if (!data.email) {
         console.log("not signed in");
         bodyInput.attr("placeholder", "Please sign in to chat!");
       } else {
