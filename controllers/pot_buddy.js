@@ -42,21 +42,30 @@ router.get("/sign-up", function (req, res) {
 
 // get route -> my-garden
 router.get("/my-garden", function (req, res) {
-  // replace old function with sequelize function
+  // .findAll sequelize function
   db.Plants.findAll()
     // use promise method to pass the plants...
     .then(function (dbp) {
       // console.log(dbp);
       // into the main index, updating the page
       var hbsObject = { plant: dbp, layout: "garden" };
-
       return res.render("garden", hbsObject);
     });
 });
 
-// get route -> chat
-router.get("/chat", function (req, res) {
-  return res.render("chat", { layout: 'chat' });
+
+// get route -> plants
+router.get("/plants", function (req, res) {
+  // .findAll sequelize function
+  db.Plants.findAll({ limit: 25 })
+    // use promise method to pass the plants...
+    .then(function (dbp) {
+      // console.log(dbp);
+      // into the main index, updating the page
+      var hbsObject = { plant: dbp, layout: "main" };
+      return res.render("plants", hbsObject);
+    });
+
 });
 
 // get route -> survey
@@ -71,6 +80,12 @@ router.get("/badges", function (req, res) {
 
 
 // CHAT ROUTES
+
+// get route -> chat
+router.get("/chat", function (req, res) {
+  return res.render("chat", { layout: 'chat' });
+});
+
 // GET route for retrieving all messages
 router.get("/api/chat", function (req, res) {
   db.Chat.findAll({

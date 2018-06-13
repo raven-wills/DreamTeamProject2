@@ -1,17 +1,18 @@
+
 <ul>
     {{#each plant}}
     <li>
-        <div class="section" id="section1">
+        <div class="section">
 
-            <div class="col s8 m8 l8">
-                <h2 class="header"> Common Name: {{commonName}} </h2>
+            <div class="col 5">
+                <h2 class="header-plant"> Common Name: {{commonName}} </h2>
                 <div class="card horizontal">
                     <div class="card-image">
                         <img src="../assets/images/faviCacti.png">
                     </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <p>Scientific Name: {{scientificName}}</p>
+                            <p class="black-text">Scientific Name: {{scientificName}}</p>
                             <p>Watering: {{moistUse}}</p>
                             <p>Indoor/Outdoor Plant</p>
                         </div>
@@ -19,13 +20,14 @@
 
                         <div class="card-action">
                             <div class="row">
-                                <div class="col s2 m2 l1">
+                                <div class="col 1">
                                     <a class="btn-floating btn-large waves-effect waves-light green darken-1 " data-position="top" data-tooltip="Go Home" href="/">
                                         <i class="material-icons">home</i>
                                     </a>
                                 </div>
 
-                                <div class="col s2 m2 l1">
+
+                                <div class="col 1">
                                     <a class="btn-floating btn-large waves-effect waves-light green darken-1" href="/create">
                                         <i class="material-icons">add</i>
                                     </a>
@@ -36,56 +38,7 @@
                 </div>
             </div>
 
-</li>
-{{/each}}
-</ul> 
-
-            {{!-- <ul class="nav">
-                <li>
-                    <a href="#section1">1</a>
-                </li>
-                <li>
-                    <a href="#section2">2</a>
-                </li>
-                <li>
-                    <a href="#section3">3</a>
-                </li>
-            </ul>
-
-        </div> --}}
-
-
-
-        {{!-- <div class="section" id="section2">
-            <h2>Section 2</h2>
-            <p>
-                A fathomless and boundless deep, There we wander, there we weep; On the hungry craving wind My Spectre follows thee behind.
-
-            </p>
-            <ul class="nav">
-                <li>
-                    <a href="#section1">1</a>
-                </li>
-                <li>2</li>
-                <li>
-                    <a href="#section3">3</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section" id="section3">
-            <h2>Section 3</h2>
-            <p>
-                He scents thy footsteps in the snow Wheresoever thou dost go, Thro' the wintry hail and rain. When wilt thou return again?
-
-            </p>
-            <ul class="nav">
-                <li>
-                    <a href="#section1">1</a>
-                </li>
-                <li>
-                    <a href="#section2">2</a>
-                </li>
-                <li>3</li>
-            </ul>
-        </div> --}}
+    </li>
+    {{/each}}
+</ul>
+           
