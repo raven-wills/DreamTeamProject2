@@ -95,7 +95,6 @@ img {
   grid-template-rows: auto;
   grid-gap: 20px 20px;
   justify-content: center;
-  margin-top: 30px;
 }
 
 #header {
@@ -107,7 +106,7 @@ img {
 }
 
 .item {
-  height: 270px;
+  height: 48vh;
   background-color: rgb(87, 165, 87);
   transition: 0.3s;
   vertical-align: middle;
@@ -212,7 +211,7 @@ p {
     height: 170px;
     margin: auto;
     right: 0;
-    bottom: 35%;
+    bottom: 36.5%;
     left: 0;
   }
   
