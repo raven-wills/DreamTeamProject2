@@ -86,7 +86,14 @@
 img {
   width: 100%; /* or any custom size */
   height: 100%;
-  object-fit: contain;
+  z-index: 4000;
+  border-radius: 100px;
+  box-shadow: 0 3px 7px 5px rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+#vineimage{
+  background-color: white;
 }
 
 .container {
@@ -95,6 +102,7 @@ img {
   grid-template-rows: auto;
   grid-gap: 20px 20px;
   justify-content: center;
+  margin-top: 15px;
 }
 
 #header {
@@ -106,53 +114,31 @@ img {
 }
 
 .item {
-  height: 48vh;
+  height: 47vh;
   background-color: rgb(87, 165, 87);
   transition: 0.3s;
   vertical-align: middle;
   line-height: 200px;
-  border-radius: 5px;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.3),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .item:hover {
   opacity: 0.2;
-  cursor: pointer;
 }
 
 .item-1 {
   background-image: url("https://i.pinimg.com/originals/ad/22/72/ad2272dec4fa7b73b7941681cbc59aa1.gif");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 100% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 100% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
+    border-radius: 10px;
 }
 
 .item-2 {
   background-image: url("https://zippy.gfycat.com/CourageousChillyCrocodile.gif");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 0% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 0% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
 }
 
 .item-3 {
@@ -160,40 +146,24 @@ img {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 100% 0%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 100% 0%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
 }
 
 .item-4 {
   background-image: url("https://zippy.gfycat.com/TastyFantasticAmericanredsquirrel.gif");
   background-position: center;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 0 0,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 0 0,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card-h2 {
+  margin-top: 5px;
+  padding-top: 20px;
+  top: 0;
 }
 
 h2 {
   font-family: "Vibur", cursive;
-  margin: 0;
+  margin: 2.2em;
 }
 
 p {
@@ -201,23 +171,22 @@ p {
 }
 
 /* / potbuddy login logo */
-  .plantDatabase:hover {
-    cursor: pointer;
-  }
-  .plantDatabase {
-    position: absolute;
-    z-index: 2000;
-    width: 170px;
-    height: 170px;
-    margin: auto;
-    right: 0;
-    bottom: calc(50vh - 85px);;
-    left: 0;
-  }
-  
-  #h2Database {
-    position: absolute;
-    z-index: 1600;
-  }
+.plantDatabase:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.plantDatabase {
+  position: absolute;
+  z-index: 2000;
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  right: 0;
+  bottom: 38%;
+  left: 0;
+}
 
-
+#h2Database {
+  position: absolute;
+  z-index: 1600;
+}
