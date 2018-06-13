@@ -41,7 +41,7 @@ module.exports = function(sequelize, DataTypes) {
       // Giving the User model a name of type STRING
     name: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       len: [1, 20]
     },
 
