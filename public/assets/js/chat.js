@@ -1,11 +1,12 @@
 $(document).ready(function() {
   // Getting jQuery references to the message body and author
   var bodyInput = $("#submitBody");
-  var authorInput = $("#submitAuthor");
+  var localUser;
   // Adding an event listener for when the form is submitted
   $("#chatSubmit").on("submit", handleFormSubmit);
   
   // Get messages upon page load
+  getUserInfo();
   getChat();
 
   // A function for handling what happens when the form to create a new message is submitted
@@ -18,10 +19,22 @@ $(document).ready(function() {
     // Constructing a newMessage object to hand to the database
     var newMessage = {
       body: bodyInput.val().trim(),
-      UserId: authorInput.val()
+      UserId: localUser.id
     };
     // Post to database, then retrieve updated view
     $.post("/api/chat", newMessage, getChat); 
+  }
+
+  function getUserInfo() {
+    $.get("/api/user_data", function(data) {
+      if (!data) {
+        console.log("not signed in");
+        bodyInput.attr("placeholder", "Please sign in to chat!");
+      } else {
+        localUser = data;
+        bodyInput.attr("placeholder", "Welcome " + localUser.email + "! Type your message here.");
+      }
+    });
   }
 
   
@@ -60,7 +73,7 @@ $(document).ready(function() {
   function createMessageRow(data) {
     // Create separate elements for each part of the message so that they can be individually styled
     var $message = $("<div>", {"class": "messageComplete"});
-    var $authorName = $("<span>", {"class": "authorName"}).html(data.User.name + "&nbsp;&nbsp;");
+    var $authorName = $("<span>", {"class": "authorName"}).html(data.User.email + "&nbsp;&nbsp;");
     var $postedAt = $("<span>", {"class": "postedAt"}).html(moment(data.createdAt).format("h:mm A"));
     var $messageBody = $("<div>", {"class": "messageBody"}).html(data.body);
     // Print author and time if conditions are met
