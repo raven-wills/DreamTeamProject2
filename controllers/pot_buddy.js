@@ -17,11 +17,7 @@ router.get("/", function(req, res) {
   }
 
   // send us to the next get function instead.
-<<<<<<< HEAD
   return res.render("login", { layout: 'user' });
-=======
-  return res.render("signup", { layout: "user" });
->>>>>>> upstream/master
 });
 
 // login
@@ -55,18 +51,8 @@ router.get("/my-garden", function (req, res) {
     raw: true
   }
 )
-<<<<<<< HEAD
     // use promise method to pass the users plants...
     .then(function (dbp) {
-=======
-    // use promise method to pass the plants...
-    .then(function(dbp) {
-      // console.log(dbp);
-      // into the main index, updating the page
-      uPlants =  dbp ;
-
-      console.log(uPlants);
->>>>>>> upstream/master
 
       // pushes users plants names into array
       for (var i = 0; i < dbp.length; i++) {
@@ -131,10 +117,7 @@ router.get("/badges", function(req, res) {
 
 // get route -> survey
 router.get("/survey", function(req, res) {
-<<<<<<< HEAD
   // send us to the next get function instead.
-=======
->>>>>>> upstream/master
   return res.render("survey");
 });
 // Select just one plant by an id

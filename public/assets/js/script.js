@@ -68,7 +68,10 @@ function showQuestions() {
 
 function nextQuestion(el) {
  currentQuestion++;
-
+ $("#ans1").text("");
+ $("#ans2").text("");
+ $("#ans3").text("");
+ $("#ans4").text("");
  showQuestions();
 }
 
