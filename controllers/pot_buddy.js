@@ -19,7 +19,7 @@ router.get("/", function (req, res) {
   }
 
   // send us to the next get function instead.
-  return res.render("signup", { layout: 'user' });
+  return res.render("login", { layout: 'user' });
 });
 
 // login
