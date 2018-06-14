@@ -72,6 +72,7 @@ function nextQuestion(el) {
  $("#ans2").text("");
  $("#ans3").text("");
  $("#ans4").text("");
+ 
  showQuestions();
 }
 
