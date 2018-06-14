@@ -17,11 +17,7 @@ router.get("/", function(req, res) {
   }
 
   // send us to the next get function instead.
-<<<<<<< HEAD
   return res.render("signup", { layout: "user" });
-=======
-  return res.render("signup", { layout: 'user' });
->>>>>>> 8f169e3e2194906c95ded13b1b608ef14d16660e
 });
 
 // login
@@ -30,11 +26,7 @@ router.get("/login", function(req, res) {
   if (req.user) {
     res.redirect("/");
   }
-<<<<<<< HEAD
   return res.render("login", { layout: "user" });
-=======
-  return res.render("login", { layout: 'user' });
->>>>>>> 8f169e3e2194906c95ded13b1b608ef14d16660e
 });
 
 // login
@@ -43,18 +35,11 @@ router.get("/sign-up", function(req, res) {
   if (req.user) {
     res.redirect("/");
   }
-<<<<<<< HEAD
   return res.render("signup", { layout: "user" });
-=======
-  return res.render("signup", { layout: 'user' });
->>>>>>> 8f169e3e2194906c95ded13b1b608ef14d16660e
 });
 
 
 // get route -> my-garden
-<<<<<<< HEAD
-router.get("/my-garden", function(req, res) {
-=======
 router.get("/my-garden", function (req, res) {
 
 
@@ -63,7 +48,6 @@ router.get("/my-garden", function (req, res) {
 
   var uPlants;
   var plantsArr = [];
->>>>>>> 8f169e3e2194906c95ded13b1b608ef14d16660e
   // .findAll sequelize function
   db.UserPlant.findAll({
     include: [db.User],
