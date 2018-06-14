@@ -19,7 +19,7 @@ router.get("/", function (req, res) {
   }
 
   // send us to the next get function instead.
-  return res.render("signup", { layout: 'user'});
+  return res.render("signup", { layout: 'user' });
 });
 
 // login
@@ -28,7 +28,7 @@ router.get("/login", function (req, res) {
   if (req.user) {
     res.redirect("/");
   }
-  return res.render("login", { layout: 'user'});
+  return res.render("login", { layout: 'user' });
 });
 
 // login
@@ -37,20 +37,72 @@ router.get("/sign-up", function (req, res) {
   if (req.user) {
     res.redirect("/");
   }
-  return res.render("signup", { layout: 'user'});
+  return res.render("signup", { layout: 'user' });
 });
 
 // get route -> my-garden
 router.get("/my-garden", function (req, res) {
+
+  var uPlants;
+  var plantsArr = [];
   // .findAll sequelize function
-  db.Plants.findAll()
+  db.UserPlant.findAll({
+    include: [db.User],
+    raw: true
+  }
+)
     // use promise method to pass the plants...
     .then(function (dbp) {
       // console.log(dbp);
       // into the main index, updating the page
-      var hbsObject = { plant: dbp, layout: "garden" };
-      return res.render("garden", hbsObject);
+      uPlants =  dbp ;
+
+      console.log(uPlants);
+
+      for (var i = 0; i < uPlants.length; i++) {
+        plantsArr.push(uPlants[i].plant);
+      }
+
+      // uPlants.forEach(element => {
+      //   plantsArr.push(uPlants.plant)
+      // });
+
+      console.log(plantsArr);
+      
+      db.Plants.findAll({ 
+        where: { commonName: [plantsArr] }
+      })
+        // use promise method to pass the plants...
+        .then(function (x) {
+          // console.log(dbp);
+          // into the main index, updating the page
+          var hbsObject = { plant: x, layout: "garden" };
+          return res.render("garden", hbsObject);
+        });
     });
+      
+    });
+
+
+
+// GET route for retrieving all users plants
+router.get("/api/my-garden", function (req, res) {
+  db.UserPlant.findAll({
+    include: [db.User],
+  }).then(function (dbPost) {
+    res.json(dbPost);
+  });
+});
+
+// POST route for saving a new plant
+router.post("/api/my-garden", function (req, res) {
+
+  db.UserPlant.create({
+    UserId: req.body.UserId,
+    plant: req.body.plant
+  }).then(function (dbPost) {
+    res.json(dbPost);
+  });
 });
 
 

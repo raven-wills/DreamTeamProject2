@@ -16,6 +16,10 @@ $(document).ready(function () {
     $("#i4").on("click", function () {
       window.location.href = "/my-garden";
     });
+
+    $("#h2Database").on("click", function () {
+      window.location.href = "/plants";
+    });
   });
 
 
