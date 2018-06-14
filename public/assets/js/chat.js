@@ -25,7 +25,7 @@ $(document).ready(function() {
       
      
   function joinChat() {
-      $.post('join-chat', {username: localUser.name}, function() {
+      $.post('join-chat', {userId: localUser.id}, function() {
               // User has joined the chat
               const channel = pusher.subscribe('presence-groupChat');
               channel.bind('pusher:subscription_succeeded', (members) => {
