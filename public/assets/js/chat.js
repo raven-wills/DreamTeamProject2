@@ -11,6 +11,7 @@ $(document).ready(function() {
 
 
   const pusher = new Pusher('7e8690097d33fa90c7a8', {
+    cluster: 'us2',
     encrypted: true,
     authEndpoint: 'pusher/auth'
   });
