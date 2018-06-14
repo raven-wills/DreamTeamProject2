@@ -46,7 +46,7 @@ $(document).ready(function() {
   
   function listen() {
       const channel = pusher.subscribe('presence-groupChat');
-      channel.bind('pusher:message_sent', function() {
+      channel.bind('message_sent', function() {
         console.log("message_sent");
         getChat();
       });
