@@ -43,17 +43,14 @@ router.get("/sign-up", function (req, res) {
 
 // get route -> my-garden
 router.get("/my-garden", function (req, res) {
-
-
-  
-  console.log(req.body)
+ 
 
   var uPlants;
   var plantsArr = [];
   // .findAll sequelize function
   db.UserPlant.findAll({
     include: [db.User],
-    
+    where: {UserId: req.user.id},
     raw: true
   }
 )
@@ -95,7 +92,7 @@ router.get("/my-garden", function (req, res) {
 router.get("/api/my-garden", function (req, res) {
   db.UserPlant.findAll({
     include: [db.User],
-    
+    where: {UserId: req.user.id},
   }).then(function (dbPost) {
     res.json(dbPost);
   });
