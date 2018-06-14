@@ -77,7 +77,7 @@ $(document).ready(function() {
           bodyInput.attr("placeholder", "Please sign in to chat!");
         } else {
           localUser = data;
-          console.log(localUser);
+          console.log(localUser[0]);
           bodyInput.attr("placeholder", "Welcome " + localUser.name + "! Type your message here.");
           joinChat();
         }

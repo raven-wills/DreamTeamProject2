@@ -180,6 +180,7 @@ router.post('/join-chat', (req, res) => {
   req.session.userId = req.body.userId;
   req.session.username = req.body.username
   res.json('Joined');
+  console.log(req.session.userId);
 });
 
 router.post('/pusher/auth', (req, res) => {
