@@ -40,12 +40,6 @@ button {
   float: right;
   transition: 0.4s;
   margin-right: 50vh;
-  transition: 0.4s;
-}
-
-button:hover {
-  background-color: #b6daaf;
-  background-position: right top;
 }
 
 textarea {
