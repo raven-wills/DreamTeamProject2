@@ -9,6 +9,16 @@ var passport = require("../config/passport");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
+var Pusher = require('pusher');
+
+var pusher = new Pusher({
+  appId:     process.env.PUSHER_APP_ID,
+  key:       process.env.PUSHER_APP_KEY,
+  secret:    process.env.PUSHER_APP_SECRET,
+  cluster:   process.env.PUSHER_APP_CLUSTER,
+  encrypted: true
+});
+
 
 // HTML ROUTES
 // get route -> index
@@ -102,6 +112,7 @@ router.post("/api/chat", function (req, res) {
     body: req.body.body,
     UserId: req.body.UserId
   }).then(function (dbPost) {
+    pusher.trigger('presence-groupChat', 'message_sent');
     res.json(dbPost);
   });
 });
@@ -164,3 +175,20 @@ router.get("/api/user_data", function (req, res) {
 
 module.exports = router;
 
+
+router.post('/join-chat', (req, res) => {
+  // store username in session
+  req.session.username = req.body.username;
+  res.json('Joined');
+});
+
+router.post('/pusher/auth', (req, res) => {
+  const socketId = req.body.socket_id;
+  const channel = req.body.channel_name;
+  // Retrieve username from session and use as presence channel user_id
+  const presenceData = {
+      user_id: req.session.username
+  };
+  const auth = pusher.authenticate(socketId, channel, presenceData);
+  res.send(auth);
+});

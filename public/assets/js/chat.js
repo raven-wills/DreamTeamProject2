@@ -9,6 +9,73 @@ $(document).ready(function() {
   getUserInfo();
   getChat();
 
+
+  const pusher = new Pusher('0a6f033fb9407c9c16ac', {
+    cluster: 'us2',
+    encrypted: true,
+    authEndpoint: 'pusher/auth'
+  });
+
+      
+
+  var username = '';
+  var connectedUsers = '';
+  var newMessage = '';
+  var messages = [];
+  var status = $("#status");
+      
+     
+  function joinChat() {
+      $.post('join-chat', {username: localUser.name}, function() {
+              // User has joined the chat
+              const channel = pusher.subscribe('presence-groupChat');
+              channel.bind('pusher:subscription_succeeded', (members) => {
+                  connectedUsers = Object.keys(channel.members.members);
+                  console.log(connectedUsers);
+                  showUsers();
+              });
+              // User joins chat
+              channel.bind('pusher:member_added', (member) => {
+                connectedUsers = Object.keys(channel.members.members);
+                showUsers();
+                $.post("/api/chat", {
+                  body: member.id + " has joined the chat",
+                  UserId: 1
+                }, getChat); 
+              });
+              // Listen for chat messages
+              listen();
+          });
+  };
+  
+  function listen() {
+      const channel = pusher.subscribe('presence-groupChat');
+      channel.bind('message_sent', getChat);
+      channel.bind('member_added', showUsers);
+      channel.bind('pusher:member_removed', (member) => {
+        connectedUsers = Object.keys(channel.members.members);
+        console.log(connectedUsers);
+        showUsers();
+        $.post("/api/chat", {
+          body: member.id + " has left the chat",
+          UserId: 1
+        }, getChat); 
+      });
+  };
+  var connectionList = $("#connectionList")
+
+  function showUsers() {
+    connectionList.empty();
+    console.log(connectedUsers);
+    var list = "";
+    for (var i = 0; i < connectedUsers.length; i++) {
+      list = list + (connectedUsers[i] + "<br>");
+    }
+    console.log(list);
+    connectionList.append(list);
+  };
+      
+  
   // Store current user info on client side. Set form placeholder to welcome user
     function getUserInfo() {
       $.get("/api/user_data", function(data) {
@@ -18,6 +85,7 @@ $(document).ready(function() {
         } else {
           localUser = data;
           bodyInput.attr("placeholder", "Welcome " + localUser.name + "! Type your message here.");
+          joinChat();
         }
       });
     }
