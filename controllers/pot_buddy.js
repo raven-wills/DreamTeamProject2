@@ -46,11 +46,15 @@ router.get("/my-garden", function (req, res) {
   var uPlants;
   var plantsArr = [];
   // .findAll sequelize function
+<<<<<<< HEAD
   db.UserPlant.findAll({
     include: [db.User],
     raw: true
   }
 )
+=======
+  db.Plants.findAll({ limit: 5 })
+>>>>>>> upstream/master
     // use promise method to pass the plants...
     .then(function (dbp) {
       // console.log(dbp);
@@ -109,7 +113,7 @@ router.post("/api/my-garden", function (req, res) {
 // get route -> plants
 router.get("/plants", function (req, res) {
   // .findAll sequelize function
-  db.Plants.findAll({ limit: 25 })
+  db.Plants.findAll({ limit: 5 })
     // use promise method to pass the plants...
     .then(function (dbp) {
       // console.log(dbp);

@@ -9,12 +9,6 @@ $(document).ready(function () {
     $(".btn-floating").on("click", function () {
         event.preventDefault();
 
-        // Constructing a newPlant object to hand to the database
-        // var newPlant = {
-        //     plant: $(this).attr("name"),
-        //     UserId: localUser.id
-        // };
-        // console.log(newPlant)
         // Post to database, retrieve updated view, change placeholder to standard
         $.post("/api/my-garden", {
             plant: $(this).attr("name"),
