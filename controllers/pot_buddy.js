@@ -177,7 +177,8 @@ module.exports = router;
 
 router.post('/join-chat', (req, res) => {
   // store username in session
-  req.session.username = req.body.userId;
+  req.session.userId = req.body.userId;
+  req.session.username = req.body.username
   res.json('Joined');
 });
 
@@ -186,9 +187,12 @@ router.post('/pusher/auth', (req, res) => {
   const channel = req.body.channel_name;
   // Retrieve username from session and use as presence channel user_id
   const presenceData = {
-      user_id: req.session.username
+      user_id: req.session.userId,
+      user_info: {
+        name: req.session.username,
+      }
   };
-  console.log("presenceData: " + presenceData);
+  console.log("presenceData: " + presenceData.user_info.name);
   const auth = pusher.authenticate(socketId, channel, presenceData);
   res.send(auth);
 });

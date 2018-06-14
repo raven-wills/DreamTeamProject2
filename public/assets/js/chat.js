@@ -18,25 +18,22 @@ $(document).ready(function() {
       
 
   var username = '';
-  var connectedUsers = '';
   var newMessage = '';
   var messages = [];
   var status = $("#status");
       
      
   function joinChat() {
-      $.post('join-chat', {userId: localUser.id}, function() {
+      $.post('join-chat', {userId: localUser.id, username: localUser.name}, function() {
               // User has joined the chat
               const channel = pusher.subscribe('presence-groupChat');
-              channel.bind('pusher:subscription_succeeded', (members) => {
-                  connectedUsers = Object.keys(channel.members.members);
-                  console.log(connectedUsers);
-                  showUsers();
+              channel.bind('pusher:subscription_succeeded', (member) => {
+                showUsers(channel)
               });
               // User joins chat
               channel.bind('pusher:member_added', (member) => {
-                connectedUsers = Object.keys(channel.members.members);
-                showUsers();
+                showUsers(channel);
+                
                 $.post("/api/chat", {
                   body: member.id + " has joined the chat",
                   UserId: 1
@@ -44,7 +41,7 @@ $(document).ready(function() {
               });
               // Listen for chat messages
               listen();
-          });
+      });
   };
   
   function listen() {
@@ -52,9 +49,7 @@ $(document).ready(function() {
       channel.bind('message_sent', getChat);
       channel.bind('member_added', showUsers);
       channel.bind('pusher:member_removed', (member) => {
-        connectedUsers = Object.keys(channel.members.members);
-        console.log(connectedUsers);
-        showUsers();
+          showUsers(channel);
         $.post("/api/chat", {
           body: member.id + " has left the chat",
           UserId: 1
@@ -63,15 +58,14 @@ $(document).ready(function() {
   };
   var connectionList = $("#connectionList")
 
-  function showUsers() {
+  function showUsers(channel) {
     connectionList.empty();
-    console.log(connectedUsers);
-    var list = "";
-    for (var i = 0; i < connectedUsers.length; i++) {
-      list = list + (connectedUsers[i] + "<br>");
-    }
-    console.log(list);
-    connectionList.append(list);
+        channel.members.each(function(member) {
+          var userId = member.id;
+          var userInfo = member.info;
+          console.log(userInfo.name);
+          connectionList.append(userInfo.name + "<br>");
+        });
   };
       
   
