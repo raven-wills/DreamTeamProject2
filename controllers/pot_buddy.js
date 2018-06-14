@@ -57,12 +57,12 @@ router.get("/my-garden", function (req, res) {
 // get route -> plants
 router.get("/plants", function (req, res) {
   // .findAll sequelize function
-  db.Plants.findAll({ limit: 5 })
+  db.Plants.findAll({ limit: 35 })
     // use promise method to pass the plants...
     .then(function (dbp) {
       // console.log(dbp);
       // into the main index, updating the page
-      var hbsObject = { plant: dbp, layout: "main" };
+      var hbsObject = { plant: dbp, layout: "plants" };
       return res.render("plants", hbsObject);
     });
 

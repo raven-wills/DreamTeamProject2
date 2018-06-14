@@ -1,15 +1,19 @@
 <div class="container-plants ">
-
-
-    <div class="row">
+    {{!-- <div class="row">
         <div class="col l12">
             <form>
                 <input type="text" name="search" placeholder="Search for your new buddy..">
             </form>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="row">
+<div id="custom-templates">
+  <input class="typeahead" type="text" placeholder="Oscar winners for Best Picture">
+</div>
+view raw
+
+
+    <div class="row" id="cards">
         {{#each plant}}
         <div class="col s12 m6 l4">
             <div class="card small">
@@ -29,32 +33,10 @@
         {{/each}}
     </div>
 
-    <ul class="pagination">
-        <li class="disabled">
-            <a href="#!">
-                <i class="material-icons">chevron_left</i>
-            </a>
-        </li>
-        <li class="active">
-            <a href="#!">1</a>
-        </li>
-        <li class="waves-effect">
-            <a href="#!">2</a>
-        </li>
-        <li class="waves-effect">
-            <a href="#!">3</a>
-        </li>
-        <li class="waves-effect">
-            <a href="#!">4</a>
-        </li>
-        <li class="waves-effect">
-            <a href="#!">5</a>
-        </li>
-        <li class="waves-effect">
-            <a href="#!">
-                <i class="material-icons">chevron_right</i>
-            </a>
-        </li>
-    </ul>
+
+    <button id="loadMore">Load more +</button>
+    <button id="showLess">Show less -</button>
+      <button class="totop" href="#top">Back to top</button>
 
 </div>
+

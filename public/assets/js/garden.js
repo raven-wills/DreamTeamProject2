@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 
 
-//   JinvertScroll
+//   Horizontal Scroll
 $(function() {
 	$('ul.nav a').bind('click',function(event){
 		var $anchor = $(this);
@@ -36,5 +36,4 @@ $(function() {
 		event.preventDefault();
 	});
 });
-
 
