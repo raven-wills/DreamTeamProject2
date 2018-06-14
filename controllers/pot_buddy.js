@@ -44,41 +44,30 @@ router.get("/sign-up", function (req, res) {
 // get route -> my-garden
 router.get("/my-garden", function (req, res) {
  
-
-  var uPlants;
   var plantsArr = [];
-  // .findAll sequelize function
+
+  // Find all sequelize function where UserId = current user's id
   db.UserPlant.findAll({
     include: [db.User],
     where: {UserId: req.user.id},
     raw: true
   }
 )
-    // use promise method to pass the plants...
+    // use promise method to pass the users plants...
     .then(function (dbp) {
-      // console.log(dbp);
-      // into the main index, updating the page
-      uPlants =  dbp ;
 
-      console.log(uPlants);
-
-      for (var i = 0; i < uPlants.length; i++) {
-        plantsArr.push(uPlants[i].plant);
+      // pushes users plants names into array
+      for (var i = 0; i < dbp.length; i++) {
+        plantsArr.push(dbp[i].plant);
       }
-
-      // uPlants.forEach(element => {
-      //   plantsArr.push(uPlants.plant)
-      // });
-
-      console.log(plantsArr);
-      
+    
+      //finds the users plants infor in the Plants db
       db.Plants.findAll({ 
         where: { commonName: [plantsArr] }
       })
         // use promise method to pass the plants...
+        // renders garden page with garden layout
         .then(function (x) {
-          // console.log(dbp);
-          // into the main index, updating the page
           var hbsObject = { plant: x, layout: "garden" };
           return res.render("garden", hbsObject);
         });
@@ -102,7 +91,7 @@ router.get("/api/my-garden", function (req, res) {
 router.post("/api/my-garden", function (req, res) {
 
   db.UserPlant.create({
-    UserId: req.body.UserId,
+    UserId: req.user.id,
     plant: req.body.plant
   }).then(function (dbPost) {
     res.json(dbPost);
