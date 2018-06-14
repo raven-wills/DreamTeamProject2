@@ -46,7 +46,10 @@ $(document).ready(function() {
   
   function listen() {
       const channel = pusher.subscribe('presence-groupChat');
-      channel.bind('message_sent', getChat);
+      channel.bind('message_sent', function() {
+        console.log("message_sent");
+        getChat();
+      });
       channel.bind('member_added', showUsers);
       channel.bind('pusher:member_removed', (member) => {
           showUsers(channel);
@@ -77,7 +80,7 @@ $(document).ready(function() {
           bodyInput.attr("placeholder", "Please sign in to chat!");
         } else {
           localUser = data;
-          console.log(localUser[0]);
+          console.log(localUser);
           bodyInput.attr("placeholder", "Welcome " + localUser.name + "! Type your message here.");
           joinChat();
         }

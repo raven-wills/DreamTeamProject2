@@ -112,6 +112,7 @@ router.post("/api/chat", function (req, res) {
     UserId: req.body.UserId
   }).then(function (dbPost) {
     pusher.trigger('presence-groupChat', 'message_sent');
+    console.log("message_sent");
     res.json(dbPost);
   });
 });
