@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    // Getting jQuery author and chosen plant
+    // Getting jQuery user and chosen plant
 
     // Get messages upon page load
     getUserInfo();
@@ -8,7 +8,7 @@ $(document).ready(function () {
     // Adding an event listener for when the form is submitted
     $(".btn-floating").on("click", function () {
         event.preventDefault();
-
+        
         // Post to database, retrieve updated view, change placeholder to standard
         $.post("/api/my-garden", {
             plant: $(this).attr("name"),

@@ -40,14 +40,20 @@ router.get("/sign-up", function (req, res) {
   return res.render("signup", { layout: 'user' });
 });
 
+
 // get route -> my-garden
 router.get("/my-garden", function (req, res) {
+
+
+  
+  console.log(req.body)
 
   var uPlants;
   var plantsArr = [];
   // .findAll sequelize function
   db.UserPlant.findAll({
     include: [db.User],
+    
     raw: true
   }
 )
@@ -89,6 +95,7 @@ router.get("/my-garden", function (req, res) {
 router.get("/api/my-garden", function (req, res) {
   db.UserPlant.findAll({
     include: [db.User],
+    
   }).then(function (dbPost) {
     res.json(dbPost);
   });
@@ -103,6 +110,7 @@ router.post("/api/my-garden", function (req, res) {
   }).then(function (dbPost) {
     res.json(dbPost);
   });
+
 });
 
 
