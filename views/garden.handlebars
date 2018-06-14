@@ -1,3 +1,29 @@
+<nav class="cd-stretchy-nav">
+    <a class="cd-nav-trigger" href="#0">
+        Menu
+        <span aria-hidden="true"></span>
+    </a>
+
+    <ul>
+        <li>
+            <a href="/" class="active">
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="/chat">
+                <span>Chat</span>
+            </a>
+        </li>
+        <li>
+            <a href="/sign-out">
+                <span>Logout</span>
+            </a>
+        </li>
+    </ul>
+
+    <span aria-hidden="true" class="stretchy-nav-bg"></span>
+</nav>
 <ul>
     {{#each plant}}
     <li>
@@ -20,15 +46,8 @@
                         <div class="card-action">
                             <div class="row">
                                 <div class="col 1">
-                                    <a class="btn-floating btn-large waves-effect waves-light green darken-1 " data-position="top" data-tooltip="Go Home" href="/">
-                                        <i class="material-icons">home</i>
-                                    </a>
-                                </div>
-
-
-                                <div class="col 1">
-                                    <a class="btn-floating btn-large waves-effect waves-light green darken-1" href="/create">
-                                        <i class="material-icons">add</i>
+                                    <a href="/create">
+                                        <i class="material-icons">+</i>
                                     </a>
                                 </div>
                             </div>
