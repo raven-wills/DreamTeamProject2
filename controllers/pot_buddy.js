@@ -9,7 +9,14 @@ var passport = require("../config/passport");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-var pusher = require('pusher-url').connect("http://7e8690097d33fa90c7a8:7eefdc5a8cdc41533d4d@api.pusherapp.com/apps/543661");
+var Pusher = require('pusher');
+var pusher = new Pusher({
+  appId:     "543661",
+  key:       "7e8690097d33fa90c7a8",
+  secret:    "7eefdc5a8cdc41533d4d",
+  cluster:   "us2",
+  encrypted: true
+});
 
 
 
