@@ -1,6 +1,7 @@
 // Also on Script.js for testing
 
 $(document).ready(function() {
+  
   $("#i1").on("click", function() {
     window.location.href = "/survey";
   });
