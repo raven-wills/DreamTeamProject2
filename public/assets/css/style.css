@@ -108,6 +108,12 @@ img {
   -moz-box-shadow: 1px 0px 14px 7px rgba(0, 0, 0, 0.21);
 }
 
+#vineimage:active {
+  box-shadow: 1px 0px 14px 3px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 1px 0px 14px 3px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 1px 0px 14px 3px rgba(0, 0, 0, 0.21);
+}
+
 .container {
   display: grid;
   grid-template-columns: 48% 48%;
@@ -219,7 +225,16 @@ p {
   transition: 0.3s;
 }
 
+.plantDatabase:active {
+  width: 170px;
+  height: 170px;
+}
+
 #h2Database {
   position: absolute;
   z-index: 1600;
+}
+
+a {
+  color: black;
 }

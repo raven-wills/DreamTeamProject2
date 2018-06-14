@@ -87,13 +87,6 @@ body {
   background-position: right top;
 }
 
-/* .section ul li{
-    float:left;
-    padding:5px;
-    margin:5px;
-    color:#aaa;
-  } */
-
 /* -------------------------------- 
   Stretchy Nav style - common to:
    - basic navigation
@@ -282,7 +275,6 @@ li {
   -ms-transform: translateX(3px) translateY(-50%) scaleY(0);
   -o-transform: translateX(3px) translateY(-50%) scaleY(0);
   transform: translateX(3px) translateY(-50%) scaleY(0);
-  background-color: #0a9581;
 }
 .cd-stretchy-nav ul li:first-of-type a::after {
   /* change custom icon using image sprites */
