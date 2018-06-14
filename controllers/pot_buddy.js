@@ -114,10 +114,26 @@ router.get("/plants", function (req, res) {
 
 });
 
+
 // get route -> survey
-router.get("/survey", function (req, res) {
+router.get("/survey", function(req, res) {
+  // send us to the next get function instead.
   return res.render("survey");
 });
+// Select just one plant by an id
+router.get("/findp/:plantId", function(req, res) {
+ 
+  pid=parseInt(req.params.plantId,10)
+
+    db.Plants.find({
+      where: {
+        id: pid
+      }
+    }).then((plant)=>{
+      console.log(plant)
+      return res.json(plant)})
+  });
+
 
 // get route -> badges
 router.get("/badges", function (req, res) {
@@ -126,7 +142,6 @@ router.get("/badges", function (req, res) {
 
 
 // CHAT ROUTES
-
 // get route -> chat
 router.get("/chat", function (req, res) {
   return res.render("chat", { layout: 'chat' });
