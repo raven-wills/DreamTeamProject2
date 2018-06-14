@@ -27,10 +27,7 @@
 //       name: "Joe the Tester"
 //     }
 //   });
-<<<<<<< HEAD
 
-=======
->>>>>>> upstream/master
 
 //   return User;
 // };
@@ -64,16 +61,10 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
-<<<<<<< HEAD
   User.associate = function (models) {
     // Associating User with chat messages
     User.hasMany(models.UserPlant, {});
     // User.hasMany(models.UserPlants, {});
-=======
-  User.associate = function(models) {
-    // Associating User with chat messages
-    User.hasMany(models.Chat, {});
->>>>>>> upstream/master
   };
 
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
@@ -82,17 +73,8 @@ module.exports = function (sequelize, DataTypes) {
   };
   // Hooks are automatic methods that run during various phases of the User Model lifecycle
   // In this case, before a User is created, we will automatically hash their password
-<<<<<<< HEAD
   User.hook("beforeCreate", function (user) {
     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-=======
-  User.hook("beforeCreate", function(user) {
-    user.password = bcrypt.hashSync(
-      user.password,
-      bcrypt.genSaltSync(10),
-      null
-    );
->>>>>>> upstream/master
   });
   return User;
 };
