@@ -10,7 +10,7 @@ $(document).ready(function() {
   getChat();
 
 
-  const pusher = new Pusher('0a6f033fb9407c9c16ac', {
+  const pusher = new Pusher('7e8690097d33fa90c7a8', {
     cluster: 'us2',
     encrypted: true,
     authEndpoint: 'pusher/auth'

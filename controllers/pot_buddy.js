@@ -9,15 +9,7 @@ var passport = require("../config/passport");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-var Pusher = require('pusher');
-
-var pusher = new Pusher({
-  appId:     process.env.PUSHER_APP_ID,
-  key:       process.env.PUSHER_APP_KEY,
-  secret:    process.env.PUSHER_APP_SECRET,
-  cluster:   process.env.PUSHER_APP_CLUSTER,
-  encrypted: true
-});
+var pusher = require('pusher-url').connect();
 
 
 // HTML ROUTES
