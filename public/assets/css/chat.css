@@ -1,32 +1,25 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin:0;
+    padding:0;
 }
 body {
   /* font-family: "Vibur", cursive; */
   background-image: url("http://www.pixxelfactory.net/jInvertScroll/images/horizon.png");
 }
 
-.container {
-  position: fixed;
-}
 
 #messageContainer {
   height: 400px;
-  width: 50vw;
-  background: rgb(219, 238, 228);
-  margin: 5vh 50vh;
+  width: 40vw;
+  background: rgb(219,238,228);
+  margin-top: 10vh;
+  margin-left: 10vw;
   padding: 10px 20px 10px;
   border-radius: 10px;
   overflow: auto;
   word-wrap: break-word;
   box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-.form-group {
-  margin: 0 50vh;
-  float: right;
 }
 
 button {
@@ -46,9 +39,11 @@ button {
 button:hover {
   background-color: #b6daaf;
   background-position: right top;
+  cursor: pointer;
 }
 
-textarea {
+/* input {
+  height: 20vh;
   min-width: 50vw;
   margin: 10px 0;
   padding: 3px;
@@ -56,16 +51,32 @@ textarea {
   border-radius: 5px;
   box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-}
+} */
 
 #chatSubmit {
   margin-top: 10px;
 }
-  
-label {
-  margin: 10px;
+
+label, #connHeading {
+  margin-left: 10vw;
   font-family: sans-serif;
 }
+
+#connectionList {
+  height: 180px;
+  width: 40vw;
+  margin-top: .5rem;
+  margin-left: 10vw;
+  padding: 0.375rem 0.75rem;
+  border-radius: 5px;
+  overflow: auto;
+  word-wrap: break-word;
+  color: #212529;
+  background-color: #ffffff;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
 
 .authorName {
   font-size: 16px;
@@ -79,6 +90,7 @@ label {
 .messageBody {
   margin-top: -4px;
   margin-bottom: 2px;
+
 }
 
 .messageComplete {
@@ -88,19 +100,6 @@ label {
 
 #connHeading {
   margin-top: 5vh;
-}
-
-#connectionList {
-  height: 180px;
-  width: auto;
-  border: 1px solid #ced4da;
-  margin-top: .5rem;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.25rem;
-  overflow: auto;
-  word-wrap: break-word;
-  color: #212529;
-  background-color: #ffffff;
 }
 
 /* -------------------------------- 
