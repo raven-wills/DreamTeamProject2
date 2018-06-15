@@ -12,6 +12,14 @@
   width: 200px;
 }
 
-/* .header-plant{
-    color:
-  }  */
+li{
+  padding:2px 4px;
+}
+
+.search{
+  padding: 1em;
+}
+
+.dontShow{
+  display:none;
+}

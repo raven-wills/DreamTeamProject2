@@ -1,16 +1,23 @@
 <div class="container-plants ">
-    {{!-- <div class="row">
-        <div class="col l12">
-            <form>
-                <input type="text" name="search" placeholder="Search for your new buddy..">
-            </form>
+
+
+    {{!-- <div class="row" id="searchBar">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">textsms</i>
+          <input type="text" id="autocomplete-input" class="autocomplete" >
+          <label for="autocomplete-input">Search for your new buddy here...</label>
+           <input id="add-plant" type="submit" value="Add a Buddy">
+
+
         </div>
-    </div> --}}
+      </div>
+    </div>
+  </div> --}}
 
-<div id="searchBar">
-  <input class="col l12" type="text" placeholder="Search for your new buddy here...">
 
-
+<div class="search"><label>Start typing: <input type="search" id="searchInput" /></label> <button type=button id="clearSearch">Clear</button></div>
 
     <div class="row" id="cards">
         {{#each plant}}
