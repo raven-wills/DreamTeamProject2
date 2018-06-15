@@ -17,7 +17,7 @@ router.get("/", function (req, res) {
   }
 
   // send us to the next get function instead.
-  return res.render("login", { layout: 'user' });
+  return res.render("login", { layout: "user" });
 });
 
 // login
@@ -38,10 +38,8 @@ router.get("/sign-up", function (req, res) {
   return res.render("signup", { layout: "user" });
 });
 
-
 // get route -> my-garden
-router.get("/my-garden", function (req, res) {
-
+router.get("/my-garden", function(req, res) {
   var plantsArr = [];
 
   // Find all sequelize function where UserId = current user's id
@@ -49,11 +47,9 @@ router.get("/my-garden", function (req, res) {
     include: [db.User],
     where: { UserId: req.user.id },
     raw: true
-  }
-  )
+  })
     // use promise method to pass the users plants...
-    .then(function (dbp) {
-
+    .then(function(dbp) {
       // pushes users plants names into array
       for (var i = 0; i < dbp.length; i++) {
         plantsArr.push(dbp[i].plant);
@@ -65,7 +61,7 @@ router.get("/my-garden", function (req, res) {
       })
         // use promise method to pass the plants...
         // renders garden page with garden layout
-        .then(function (x) {
+        .then(function(x) {
           var hbsObject = { plant: x, layout: "garden" };
           return res.render("garden", hbsObject);
         });
@@ -76,7 +72,7 @@ router.get("/my-garden", function (req, res) {
 
 
 // GET route for retrieving all users plants
-router.get("/api/my-garden", function (req, res) {
+router.get("/api/my-garden", function(req, res) {
   db.UserPlant.findAll({
     include: [db.User],
     where: { UserId: req.user.id },
@@ -86,15 +82,13 @@ router.get("/api/my-garden", function (req, res) {
 });
 
 // POST route for saving a new plant
-router.post("/api/my-garden", function (req, res) {
-
+router.post("/api/my-garden", function(req, res) {
   db.UserPlant.create({
     UserId: req.user.id,
     plant: req.body.plant
-  }).then(function (dbPost) {
+  }).then(function(dbPost) {
     res.json(dbPost);
   });
-
 });
 
 // get route -> plants
@@ -117,27 +111,27 @@ router.get("/badges", function (req, res) {
   return res.render("badges", { layout: "badges" });
 });
 
-
+router.get("/survey", function(req, res) {
+  return res.render("survey", { layout: "survey" });
+});
 // get route -> survey
 router.get("/survey", function (req, res) {
   // send us to the next get function instead.
   return res.render("survey");
 });
 // Select just one plant by an id
-router.get("/findp/:plantId", function (req, res) {
-
-  pid = parseInt(req.params.plantId, 10)
+router.get("/findp/:plantId", function(req, res) {
+  pid = parseInt(req.params.plantId, 10);
 
   db.Plants.find({
     where: {
       id: pid
     }
-  }).then((plant) => {
-    console.log(plant)
-    return res.json(plant)
-  })
+  }).then(plant => {
+    console.log(plant);
+    return res.json(plant);
+  });
 });
-
 
 // get route -> badges
 router.get("/badges", function (req, res) {
