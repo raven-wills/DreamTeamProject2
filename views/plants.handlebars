@@ -1,3 +1,9 @@
+<div class="fixed-action-btn">
+  <a class="btn-large green darken-2" href="/">
+    <i class="large material-icons">home</i>
+  </a>
+</div>
+
 <div class="container-plants ">
     {{!--
     <div class="row">
@@ -9,32 +15,36 @@
     </div> --}}
 
     <div id="custom-templates">
-        <input class="typeahead" type="text" placeholder="Search for Plants">
+        <input class="typeahead" type="text" placeholder="Search for Plants" id="top">
     </div>
 
     <div class="row" id="cards">
         {{#each plant}}
         <div class="col s12 m6 l4" name="{{commonName}} {{scientificName}}">
             <div class="card small">
+
                 <div class="card-image light-blue lighten-5" id="img-plants">
                     <img src="../assets/images/plant.png">
                     <span class="card-title pink-text accent-1-text">{{commonName}}</span>
+                </div>
+
+                <div class="card-content">
+
+                    <p>Scientific Name: {{scientificName}}</p>
+                    <p>Watering: {{moistUse}}</p>
                     <a class="btn-floating halfway-fab waves-effect waves-light green darken-1" name="{{commonName}}">
                         <i class="material-icons">add</i>
                     </a>
                 </div>
-                <div class="card-content">
-                    <p>Scientific Name: {{scientificName}}</p>
-                    <p>Watering: {{moistUse}}</p>
-                </div>
+
             </div>
         </div>
         {{/each}}
     </div>
 
 
-    <button id="loadMore">Load more +</button>
-    <button id="showLess">Show less -</button>
-    <button class="totop" href="#top">Back to top</button>
+    <button id="loadMore" class="btn waves-effect waves-light green green darken-1" >Load more +</button>
+    {{!--
+    <button class="totop" href="#top">Back to top</button> --}}
 
 </div>

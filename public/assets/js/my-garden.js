@@ -1,6 +1,6 @@
 // Getting plant name
 // Adding an event listener for when the form is submitted
-$(".btn-floating").on("click", function () {
+$(".btn-floating:not(.darken-2)").on("click", function () {
     event.preventDefault();
 
     $.get("/api/my-garden", function (req, res) {
@@ -25,10 +25,10 @@ $(".btn-floating").on("click", function () {
 });
 
 $(function () {
-    $(".col").slice(0, 6).show();
+    $(".col").slice(0, 30).show();
     $("#loadMore").on('click', function (e) {
         e.preventDefault();
-        $(".col:hidden").slice(0, 6).slideDown();
+        $(".col:hidden").slice(0, 30).slideDown();
         if ($(".col:hidden").length == 0) {
             $("#load").fadeOut('slow');
         }
@@ -83,4 +83,6 @@ $('.typeahead').keyup(function (eve) {
 $('#clearSearch').click(function (e) {
     $('#cBuscador').val('').keyup();
 });
+
+$('.fixed-action-btn').floatingActionButton();
 

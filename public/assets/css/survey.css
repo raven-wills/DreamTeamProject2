@@ -1,5 +1,10 @@
 body {
-  background-image: url("../images/skygrass.jpg");
+  background-image: url("../images/moregrass.jpg");
+  background-size: 200vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Josefin slab;
+  /* background-position: center; */
 }
 
 .survey {
@@ -7,6 +12,20 @@ body {
   width: 500px;
   text-align: center;
   line-height: 2em;
+}
+
+.section {
+  margin: 10vh 30vw;
+  width: 500px;
+  text-align: center;
+  line-height: 2em;
+}
+
+.card-content {
+  background-color: #8ac57f;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
 }
 
 #surveyTitle {
@@ -26,10 +45,9 @@ h2,
 }
 
 h2 {
-  width: 180px;
-  height: 70px;
-  padding: 15px 0;
-  margin: 0 3.2em;
+  width: 250px;
+  padding: 15px;
+  margin: 0 auto;
 }
 
 .qn {

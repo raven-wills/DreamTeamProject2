@@ -55,7 +55,6 @@ function showQuestions() {
     $("#ans4").text(questions[currentQuestion].choices[3]);
   } else {
 
-    $("#findplant").prepend(" <div>Find Buddy!</div>");
     $(".surveyQuestions").text("");
     $("#ans1").text("");
     $("#ans2").text("");
@@ -63,6 +62,19 @@ function showQuestions() {
     $("#ans4").text("");
 
 
+    plantId= Math.floor(Math.random()*27)
+
+  $.get("/findp/" + plantId, function(data) {
+    $(".survey").attr("style", "display: none");
+    plantObj=data;
+    $(".section").attr("style", "visibility: visible");
+    $(".header-plant").text("Common Name: "+data.commonName)
+    $(".black-text").text("Scientific Name: "+data.scientificName)
+    $("#wtrng").text("Watering: " + data.moistUse)
+    $("#shdtol").text("Shade Tolerance: " + data.shadeTol)
+    console.log('hi',data.commonName)
+
+  });
   }
 }
 
@@ -76,20 +88,4 @@ function nextQuestion(el) {
   showQuestions();
 }
 
-//Aijax//
-$(document).on("click", "#findplant", function() {
-
-  plantId= Math.floor(Math.random()*27)
-
-  $.get("/findp/" + plantId, function(data) {
-    plantObj=data;
-    $(".section").attr("style", "visibility: visible")
-    $(".header-plant").text("Common Name: "+data.commonName)
-    $(".black-text").text("Scientific Name: "+data.scientificName)
-    $("#wtrng").text("Watering: " + data.moistUse)
-    $("#shdtol").text("Shade Tolerance: " + data.shadeTol)
-    console.log('hi',data.commonName)
-
-  });
-})
 
