@@ -103,10 +103,6 @@ router.post("/api/my-garden", function(req, res) {
 
 // get route -> plants
 router.get("/plants", function (req, res) {
-  if (!req.user) {
-    res.redirect("/");
-  }
-
 
   // .findAll sequelize function
   db.Plants.findAll({})
