@@ -12,7 +12,9 @@
                 <input type="text" name="search" placeholder="Search for your new buddy..">
             </form>
         </div>
-    </div> --}}
+      </div>
+    </div>
+  </div> --}}
 
     <div id="custom-templates">
         <input class="typeahead" type="text" placeholder="Search for Plants" id="top">
@@ -32,9 +34,13 @@
 
                     <p>Scientific Name: {{scientificName}}</p>
                     <p>Watering: {{moistUse}}</p>
+<<<<<<< HEAD
                     <a class="btn-floating halfway-fab waves-effect waves-light green darken-1" name="{{commonName}}">
                         <i class="material-icons">add</i>
                     </a>
+=======
+                    
+>>>>>>> upstream/master
                 </div>
 
             </div>
@@ -42,9 +48,41 @@
         {{/each}}
     </div>
 
+</div>
 
+
+
+<<<<<<< HEAD
     <button id="loadMore" class="btn waves-effect waves-light green green darken-1" >Load more +</button>
     {{!--
     <button class="totop" href="#top">Back to top</button> --}}
+=======
+>>>>>>> upstream/master
 
-</div>
+<div class="search"><label>Start typing: <input type="search" id="searchInput" /></label> <button type=button id="clearSearch">Clear</button></div>
+<ul id="toSearchFor">
+<li>
+  
+   <div class="row" id="cards">
+        {{#each plant}}
+        <div class="col s12 m6 l4">
+            <div class="card small">
+                <div class="card-image light-blue lighten-5" id="img-plants">
+                    <img src="../assets/images/plant.png">
+                    <span class="card-title pink-text accent-1-text">{{commonName}}</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light green darken-1" name="{{commonName}}">
+                        <i class="material-icons">add</i>
+                    </a>
+                </div>
+                <div class="card-content">
+                    <p>Scientific Name: {{scientificName}}</p>
+                    <p>Watering: {{moistUse}}</p>
+                    
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+  
+  </li>
+</table>
