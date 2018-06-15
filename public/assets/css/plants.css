@@ -15,3 +15,11 @@
 /* .header-plant{
     color:
   }  */
+
+  .col {
+    display: none;
+  }
+
+  .dontShow{
+    display:none;
+  }
