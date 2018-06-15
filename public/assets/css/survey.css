@@ -7,6 +7,12 @@ body {
   /* background-position: center; */
 }
 
+button {
+  background-color: #fff;
+  color: #8ac57f;
+  border-radius: 10px;
+}
+
 .survey {
   margin: 30vh 30vw;
   width: 500px;
