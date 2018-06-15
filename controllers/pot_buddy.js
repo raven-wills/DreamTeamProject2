@@ -9,6 +9,7 @@ var passport = require("../config/passport");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
+// Config for pusher
 var Pusher = require('pusher');
 var pusher = new Pusher({
   appId:     "543096",
@@ -118,6 +119,27 @@ router.post("/api/chat", function (req, res) {
   });
 });
 
+router.post('/join-chat', (req, res) => {
+  // store username in session
+  req.session.userId = req.body.userId;
+  req.session.username = req.body.username
+  res.json('Joined');
+});
+
+router.post('/pusher/auth', (req, res) => {
+  const socketId = req.body.socket_id;
+  const channel = req.body.channel_name;
+  // Retrieve username from session and use as presence channel user_id
+  const presenceData = {
+      user_id: req.session.userId,
+      user_info: {
+        name: req.session.username,
+      }
+  };
+  const auth = pusher.authenticate(socketId, channel, presenceData);
+  res.send(auth);
+});
+
 // get route -> chat
 router.get("/create", function (req, res) {
   return res.render("create");
@@ -175,27 +197,3 @@ router.get("/api/user_data", function (req, res) {
 });
 
 module.exports = router;
-
-
-router.post('/join-chat', (req, res) => {
-  // store username in session
-  req.session.userId = req.body.userId;
-  req.session.username = req.body.username
-  res.json('Joined');
-  console.log(req.session.userId);
-});
-
-router.post('/pusher/auth', (req, res) => {
-  const socketId = req.body.socket_id;
-  const channel = req.body.channel_name;
-  // Retrieve username from session and use as presence channel user_id
-  const presenceData = {
-      user_id: req.session.userId,
-      user_info: {
-        name: req.session.username,
-      }
-  };
-  console.log("presenceData: " + presenceData.user_info.name);
-  const auth = pusher.authenticate(socketId, channel, presenceData);
-  res.send(auth);
-});

@@ -1,9 +1,4 @@
 $(document).ready(function() {
-  // Getting jQuery references to the message body and author
-  var bodyInput = $("#submitBody");
-  var localUser;
-  // Adding an event listener for when the form is submitted
-  $("#chatSubmit").on("submit", handleFormSubmit);
   
   // Get logged in user's info and chat messages upon page load
   getUserInfo();
@@ -20,6 +15,7 @@ $(document).ready(function() {
   var messages = [];
   var status = $("#status");
 
+  var localUser;
   // Store current user info on client side. Set form placeholder to welcome user
   function getUserInfo() {
     $.get("/api/user_data", function(data) {
@@ -28,7 +24,6 @@ $(document).ready(function() {
         bodyInput.attr("placeholder", "Please sign in to chat!");
       } else {
         localUser = data;
-        console.log(localUser);
         bodyInput.attr("placeholder", "Welcome " + localUser.name + "! Type your message here.");
         joinChat();
       }
@@ -81,11 +76,16 @@ $(document).ready(function() {
     channel.members.each(function(member) {
       var userId = member.id;
       var userInfo = member.info;
-      console.log(userInfo.name);
       connectionList.append(userInfo.name + "<br>");
     });
   };
       
+  // Getting jQuery references to the message body
+  var bodyInput = $("#submitBody");
+
+  // Adding an event listener for when the form is submitted
+  $("#chatSubmit").on("submit", handleFormSubmit);
+
   // A function for handling what happens when the form to create a new message is submitted
   function handleFormSubmit(event) {
     event.preventDefault();
