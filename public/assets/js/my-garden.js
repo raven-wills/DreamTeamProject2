@@ -24,8 +24,6 @@ $(".btn-floating").on("click", function () {
 
 });
 
-
-
 $(function () {
     $(".col").slice(0, 6).show();
     $("#loadMore").on('click', function (e) {
@@ -57,8 +55,7 @@ $(window).scroll(function () {
 });
 
 
-var $elementList = $('.row').find('div[class*=col]');
-console.log($elementList)
+var $elementList = $('.row').find('p');
 $('.typeahead').keyup(function (eve) {
 
     searchString = $(this).val().toLowerCase();
@@ -67,7 +64,7 @@ $('.typeahead').keyup(function (eve) {
     $elementList.each(function (index, elem) {
         $eleli = $(elem)
         $eleli.removeClass('hideThisLine');
-        var oneLine = $eleli.attr("name").toLowerCase()
+        var oneLine = $eleli.text().toLowerCase()
         match = true,
             sal = len;
         while (sal--) {
@@ -86,5 +83,4 @@ $('.typeahead').keyup(function (eve) {
 $('#clearSearch').click(function (e) {
     $('#cBuscador').val('').keyup();
 });
-
 
