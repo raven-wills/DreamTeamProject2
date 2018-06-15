@@ -86,7 +86,32 @@
 img {
   width: 100%; /* or any custom size */
   height: 100%;
-  object-fit: contain;
+}
+
+#vineimage {
+  background-color: whitesmoke;
+  z-index: 4000;
+  border-radius: 100px;
+  box-shadow: 1px 0px 14px 3px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 1px 0px 14px 3px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 1px 0px 14px 3px rgba(0, 0, 0, 0.21);
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  transition: 0.8s;
+}
+
+#vineimage:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  box-shadow: 1px 0px 14px 7px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 1px 0px 14px 7px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 1px 0px 14px 7px rgba(0, 0, 0, 0.21);
+}
+
+#vineimage:active {
+  box-shadow: 1px 0px 14px 3px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 1px 0px 14px 3px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 1px 0px 14px 3px rgba(0, 0, 0, 0.21);
 }
 
 .container {
@@ -95,6 +120,7 @@ img {
   grid-template-rows: auto;
   grid-gap: 20px 20px;
   justify-content: center;
+  margin-top: 15px;
 }
 
 #header {
@@ -106,16 +132,19 @@ img {
 }
 
 .item {
-  height: 48vh;
+  height: 47vh;
   background-color: rgb(87, 165, 87);
-  transition: 0.3s;
+  transition: 0.4s;
   vertical-align: middle;
   line-height: 200px;
-  border-radius: 5px;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.3),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 .item:hover {
-  opacity: 0.2;
+  background: rgba(76, 175, 80, 0.6);
+  font-size: 40px;
   cursor: pointer;
 }
 
@@ -123,36 +152,22 @@ img {
   background-image: url("https://i.pinimg.com/originals/ad/22/72/ad2272dec4fa7b73b7941681cbc59aa1.gif");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 100% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 100% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+.item-1:hover {
+  background-position: 0 -100px;
 }
 
 .item-2 {
   background-image: url("https://zippy.gfycat.com/CourageousChillyCrocodile.gif");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 0% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 0% 100%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
+}
+
+.item-2:hover {
+  background-position: right top;
 }
 
 .item-3 {
@@ -160,40 +175,32 @@ img {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 100% 0%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 100% 0%,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
+}
+
+.item-3:hover {
+  background-position: 0px 200px;
 }
 
 .item-4 {
   background-image: url("https://zippy.gfycat.com/TastyFantasticAmericanredsquirrel.gif");
   background-position: center;
-  -webkit-mask-image: radial-gradient(
-    circle 10px at 0 0,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
-  mask-image: radial-gradient(
-    circle 10px at 0 0,
-    transparent 0,
-    transparent 75px,
-    black 10px
-  );
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.item-4:hover {
+  background-position: 300px 200px;
+}
+
+.card-h2 {
+  margin-top: 5px;
+  padding-top: 20px;
+  top: 0;
 }
 
 h2 {
   font-family: "Vibur", cursive;
-  margin: 0;
+  margin: 2.2em;
 }
 
 p {
@@ -201,23 +208,33 @@ p {
 }
 
 /* / potbuddy login logo */
-  .plantDatabase:hover {
-    cursor: pointer;
-  }
-  .plantDatabase {
-    position: absolute;
-    z-index: 2000;
-    width: 170px;
-    height: 170px;
-    margin: auto;
-    right: 0;
-    bottom: calc(50vh - 85px);;
-    left: 0;
-  }
-  
-  #h2Database {
-    position: absolute;
-    z-index: 1600;
-  }
+.plantDatabase:hover {
+  width: 180px;
+  height: 180px;
+  cursor: pointer;
+}
+.plantDatabase {
+  position: absolute;
+  z-index: 2000;
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  right: 0;
+  bottom: 38%;
+  left: 0;
+  transition: 0.3s;
+}
 
+.plantDatabase:active {
+  width: 170px;
+  height: 170px;
+}
 
+#h2Database {
+  position: absolute;
+  z-index: 1600;
+}
+
+a {
+  color: black;
+}

@@ -1,16 +1,15 @@
-
 //CREATE Plants DB FIRST!!!!!!!!!!!!
 module.exports = function(sequelize, DataTypes) {
     // Add code here to create a Post model
     // This model needs a title, a body, and a category
     // Don't forget to 'return' the post after defining
-  
+ 
     var Plants = sequelize.define("Plants", {
-      
-      scientificName: {type: DataTypes.STRING,primaryKey: true, allowNull: false,validate:{len: [1,140] }},
+      // id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+      scientificName: {type: DataTypes.STRING, allowNull: false,validate:{len: [1,140] }},
       commonName: {type: DataTypes.TEXT, allowNull: false,},
       flowerColor: {type: DataTypes.STRING, allowNull: false,validate:{len: [1,25] }},
-      flowerCons: {type:DataTypes.BOOLEAN,allowNull: false},
+      flowerCons: {type: DataTypes.STRING, allowNull: false,validate:{len: [1,25] }},
       foliageColor:{type: DataTypes.STRING, allowNull: false,validate:{len: [1,25] }},
       shapeOri: {type: DataTypes.STRING, allowNull: false,validate:{len: [1,25] }},
       hedgeTol: {type: DataTypes.STRING, allowNull: false,validate:{len: [1,15] }},
@@ -20,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
       shadeTol: {type: DataTypes.STRING, allowNull: false,validate:{len: [1,25] }},
       lifeSpan: {type: DataTypes.STRING, allowNull: false,validate:{len: [1,25] }},
       frostMin:{type: DataTypes.INTEGER, allowNull: false},
-      bloomPer: {type: DataTypes.INTEGER, allowNull: false},
+      bloomPer: {type: DataTypes.STRING, allowNull: false,validate:{len: [1,25] }},
       heightBase: {type: DataTypes.INTEGER, allowNull: false},
       heightMat: {type: DataTypes.INTEGER, allowNull: false},
       rootDepth: {type: DataTypes.INTEGER, allowNull: false},
@@ -35,8 +34,9 @@ module.exports = function(sequelize, DataTypes) {
       salTal: {type: DataTypes.STRING, allowNull: false,validate:{len: [1,25] }},
       comAv: {type: DataTypes.STRING, allowNull: false,validate:{len: [1,25] }},
       protPot: {type: DataTypes.STRING, allowNull: false,validate:{len: [1,25] }},
-      
-
-    });
+    
+    },{
+      timestamps: false
+  });
     return Plants;
   };

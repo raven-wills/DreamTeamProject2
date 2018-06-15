@@ -99,16 +99,19 @@ $(document).ready(function() {
       UserId: localUser.id
     };
     // Post to database, retrieve updated view, change placeholder to standard
-    $.post("/api/chat", newMessage, getChat); 
+    $.post("/api/chat", newMessage, getChat);
     bodyInput.attr("placeholder", "Type your message here.");
     bodyInput.val("");
   }
-  
+
   // A function to get and then render our list of messages
   function getChat() {
     $.get("/api/chat", renderMessageList);
     // Auto-scroll to bottom of container so newest messages are visible
-    $("#messageContainer").animate({ scrollTop: $('#messageContainer').prop("scrollHeight")}, 1000);
+    $("#messageContainer").animate(
+      { scrollTop: $("#messageContainer").prop("scrollHeight") },
+      1000
+    );
   }
 
   var printUsername; // Variable to determine whether to print the time and username above a chat message
@@ -118,14 +121,17 @@ $(document).ready(function() {
     messageContainer.empty();
     // Initial message when chat is empty
     if (!data.length) {
-      var $noMessages = $("<div>", {"class": "messageBody"}).html("No messages yet..");
+      var $noMessages = $("<div>", { class: "messageBody" }).html(
+        "No messages yet.."
+      );
       messageContainer.append($noMessages);
     } else {
       for (var i = 0; i < data.length; i++) {
-        if ((i > 0) // Name must be printed on first message, so exclude first loop.
-          && (data[i].User.id === data[i-1].User.id) // If a message has the same author as the previous message...
-          && (moment(data[i].createdAt).diff(data[i-1].createdAt, 'minutes') < 1) // ...and it has been less than one minute since the previous...
-        ){
+        if (
+          i > 0 && // Name must be printed on first message, so exclude first loop.
+          data[i].User.id === data[i - 1].User.id && // If a message has the same author as the previous message...
+          moment(data[i].createdAt).diff(data[i - 1].createdAt, "minutes") < 1 // ...and it has been less than one minute since the previous...
+        ) {
           printUsername = false; // ...then don't print the name
         } else {
           printUsername = true;
@@ -138,10 +144,14 @@ $(document).ready(function() {
   // Creates the individual messages
   function createMessageRow(data) {
     // Create separate elements for each part of the message so that they can be individually styled
-    var $message = $("<div>", {"class": "messageComplete"});
-    var $authorName = $("<span>", {"class": "authorName"}).html(data.User.name + "&nbsp;&nbsp;");
-    var $postedAt = $("<span>", {"class": "postedAt"}).html(moment(data.createdAt).format("h:mm A"));
-    var $messageBody = $("<div>", {"class": "messageBody"}).html(data.body);
+    var $message = $("<div>", { class: "messageComplete" });
+    var $authorName = $("<span>", { class: "authorName" }).html(
+      data.User.name + "&nbsp;&nbsp;"
+    );
+    var $postedAt = $("<span>", { class: "postedAt" }).html(
+      moment(data.createdAt).format("h:mm A")
+    );
+    var $messageBody = $("<div>", { class: "messageBody" }).html(data.body);
     // Print author and time if conditions are met
     if (printUsername === true) {
       $message.append($authorName);
@@ -149,5 +159,27 @@ $(document).ready(function() {
     }
     $message.append($messageBody);
     return $message;
+  }
+});
+
+jQuery(document).ready(function() {
+  if ($(".cd-stretchy-nav").length > 0) {
+    var stretchyNavs = $(".cd-stretchy-nav");
+
+    stretchyNavs.each(function() {
+      var stretchyNav = $(this),
+        stretchyNavTrigger = stretchyNav.find(".cd-nav-trigger");
+
+      stretchyNavTrigger.on("click", function(event) {
+        event.preventDefault();
+        stretchyNav.toggleClass("nav-is-visible");
+      });
+    });
+
+    $(document).on("click", function(event) {
+      !$(event.target).is(".cd-nav-trigger") &&
+        !$(event.target).is(".cd-nav-trigger span") &&
+        stretchyNavs.removeClass("nav-is-visible");
+    });
   }
 });

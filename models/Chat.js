@@ -1,13 +1,17 @@
 module.exports = function(sequelize, DataTypes) {
-  var Chat = sequelize.define("Chat", {
-    body: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1, 500]
+  var Chat = sequelize.define(
+    "Chat",
+    {
+      body: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        len: [1, 500]
+      }
+    },
+    {
+      freezeTableName: true
     }
-  }, {
-    freezeTableName: true,
-  });
+  );
 
   Chat.associate = function(models) {
     // We're saying that a Post should belong to an Author
