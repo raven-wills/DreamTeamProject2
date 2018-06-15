@@ -24,6 +24,8 @@ $(".btn-floating").on("click", function () {
 
 });
 
+
+
 $(function () {
     $(".col").slice(0, 6).show();
     $("#loadMore").on('click', function (e) {
@@ -84,4 +86,5 @@ $('.typeahead').keyup(function (eve) {
 $('#clearSearch').click(function (e) {
     $('#cBuscador').val('').keyup();
 });
+
 
