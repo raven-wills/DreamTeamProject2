@@ -10,7 +10,8 @@ $(document).ready(function() {
   getChat();
 
 
-  const pusher = new Pusher('7e8690097d33fa90c7a8', { 
+  const pusher = new Pusher('0a6f033fb9407c9c16ac', { 
+    cluster: 'us2',
     encrypted: true,
     authEndpoint: 'pusher/auth'
   });
@@ -46,11 +47,8 @@ $(document).ready(function() {
   
   function listen() {
       const channel = pusher.subscribe('presence-groupChat');
-      channel.bind('message_sent', function() {
-        console.log("message_sent");
-        getChat();
-      });
-      channel.bind('member_added', showUsers);
+      channel.bind('message_sent', getChat);
+      //channel.bind('member_added', showUsers);
       channel.bind('pusher:member_removed', (member) => {
           showUsers(channel);
         $.post("/api/chat", {

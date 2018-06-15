@@ -11,9 +11,10 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 var Pusher = require('pusher');
 var pusher = new Pusher({
-  appId:     "543661",
-  key:       "7e8690097d33fa90c7a8",
-  secret:    "7eefdc5a8cdc41533d4d",
+  appId:     "543096",
+  key:       "0a6f033fb9407c9c16ac",
+  secret:    "bdad2ad595fb9707e62d",
+  cluster:   "us2",
   encrypted: true
 });
 
@@ -111,9 +112,8 @@ router.post("/api/chat", function (req, res) {
     body: req.body.body,
     UserId: req.body.UserId
   }).then(function (dbPost) {
-    pusher.trigger('presence-groupChat', 'message_sent', function(error, req, res) {
-      console.log("message_sent");
-    });
+    pusher.trigger('presence-groupChat', 'message_sent', { message: "hello world" });
+    console.log("message_sent");
     res.json(dbPost);
   });
 });
