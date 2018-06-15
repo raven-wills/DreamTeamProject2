@@ -4,7 +4,11 @@
 }
 body {
   /* font-family: "Vibur", cursive; */
-  background-image: url("http://www.pixxelfactory.net/jInvertScroll/images/horizon.png");
+  background-image: url("../images/moregrass.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 
