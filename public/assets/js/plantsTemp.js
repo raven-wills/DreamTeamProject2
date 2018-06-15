@@ -43,7 +43,7 @@
 
 
 
-var $elementList = $('.card-content').find('p');
+var $elementList = $('#row').find('p');
 
 $('#searchInput').keyup(function(eve){
         searchString=$(this).val().toLowerCase();
