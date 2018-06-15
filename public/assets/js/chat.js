@@ -5,10 +5,9 @@ $(document).ready(function() {
   // Adding an event listener for when the form is submitted
   $("#chatSubmit").on("submit", handleFormSubmit);
   
-  // Get messages upon page load
+  // Get logged in user's info and chat messages upon page load
   getUserInfo();
   getChat();
-
 
   const pusher = new Pusher('0a6f033fb9407c9c16ac', { 
     cluster: 'us2',
@@ -16,75 +15,77 @@ $(document).ready(function() {
     authEndpoint: 'pusher/auth'
   });
 
-      
-
   var username = '';
   var newMessage = '';
   var messages = [];
   var status = $("#status");
-      
-     
+
+  // Store current user info on client side. Set form placeholder to welcome user
+  function getUserInfo() {
+    $.get("/api/user_data", function(data) {
+      if (!data.email) {
+        console.log("not signed in");
+        bodyInput.attr("placeholder", "Please sign in to chat!");
+      } else {
+        localUser = data;
+        console.log(localUser);
+        bodyInput.attr("placeholder", "Welcome " + localUser.name + "! Type your message here.");
+        joinChat();
+      }
+    });
+  }
+
+  // Authenticate user and add to chat's connected users
   function joinChat() {
-      $.post('join-chat', {userId: localUser.id, username: localUser.name}, function() {
-              // User has joined the chat
-              const channel = pusher.subscribe('presence-groupChat');
-              channel.bind('pusher:subscription_succeeded', (member) => {
-                showUsers(channel)
-              });
-              // User joins chat
-              channel.bind('pusher:member_added', (member) => {
-                showUsers(channel);
-                
-                $.post("/api/chat", {
-                  body: member.id + " has joined the chat",
-                  UserId: 1
-                }, getChat); 
-              });
-              // Listen for chat messages
-              listen();
+    // Pass userId and name to pusher
+    $.post('join-chat', {userId: localUser.id, username: localUser.name}, function() {
+      const channel = pusher.subscribe('presence-groupChat');
+      channel.bind('pusher:subscription_succeeded', (member) => {
+        showUsers(channel)
       });
+      
+      // Begin listening for chat updates
+      listen();
+    });
   };
   
+  // Listeners for new messages and changes in connected users
   function listen() {
-      const channel = pusher.subscribe('presence-groupChat');
-      channel.bind('message_sent', getChat);
-      //channel.bind('member_added', showUsers);
-      channel.bind('pusher:member_removed', (member) => {
-          showUsers(channel);
-        $.post("/api/chat", {
-          body: member.id + " has left the chat",
-          UserId: 1
-        }, getChat); 
-      });
+    const channel = pusher.subscribe('presence-groupChat');
+    // New message in chat
+    channel.bind('message_sent', getChat);
+    // User joins chat
+    channel.bind('pusher:member_added', (member) => {
+      showUsers(channel);
+      
+      // Post alert using 'system' account
+      $.post("/api/chat", {
+        body: member.info.name + " has joined the chat",
+        UserId: 1
+      }); 
+    });
+    // User leaves chat
+    channel.bind('pusher:member_removed', (member) => {
+        showUsers(channel);
+      $.post("/api/chat", {
+        body: member.info.name + " has left the chat",
+        UserId: 1
+      }); 
+    });
   };
+  
   var connectionList = $("#connectionList")
-
+  // Iterate through pusher's list of connected members and push to display div
   function showUsers(channel) {
     connectionList.empty();
-        channel.members.each(function(member) {
-          var userId = member.id;
-          var userInfo = member.info;
-          console.log(userInfo.name);
-          connectionList.append(userInfo.name + "<br>");
-        });
+    channel.members.each(function(member) {
+      var userId = member.id;
+      var userInfo = member.info;
+      console.log(userInfo.name);
+      connectionList.append(userInfo.name + "<br>");
+    });
   };
       
-  
-  // Store current user info on client side. Set form placeholder to welcome user
-    function getUserInfo() {
-      $.get("/api/user_data", function(data) {
-        if (!data.email) {
-          console.log("not signed in");
-          bodyInput.attr("placeholder", "Please sign in to chat!");
-        } else {
-          localUser = data;
-          console.log(localUser);
-          bodyInput.attr("placeholder", "Welcome " + localUser.name + "! Type your message here.");
-          joinChat();
-        }
-      });
-    }
-
   // A function for handling what happens when the form to create a new message is submitted
   function handleFormSubmit(event) {
     event.preventDefault();
