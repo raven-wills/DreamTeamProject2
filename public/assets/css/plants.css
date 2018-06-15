@@ -32,3 +32,9 @@ body {
   a {
     color: white ;
   }
+
+  .card-content {
+    padding: 10px;
+}
+
+
