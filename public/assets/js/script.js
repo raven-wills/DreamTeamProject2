@@ -77,12 +77,19 @@ function nextQuestion(el) {
 }
 
 //Aijax//
-$(document).on("click", "#findplant", function () {
-  console.log("clickevent")
-  plantId = Math.floor(Math.random() * 27)
+$(document).on("click", "#findplant", function() {
 
-  $.get("/findp/" + plantId, function (data) {
-    console.log('hi', data.commonName)
+  plantId= Math.floor(Math.random()*27)
+
+  $.get("/findp/" + plantId, function(data) {
+    plantObj=data;
+    $(".section").attr("style", "visibility: visible")
+    $(".header-plant").text("Common Name: "+data.commonName)
+    $(".black-text").text("Scientific Name: "+data.scientificName)
+    $("#wtrng").text("Watering: " + data.moistUse)
+    $("#shdtol").text("Shade Tolerance: " + data.shadeTol)
+    console.log('hi',data.commonName)
+
   });
 })
 

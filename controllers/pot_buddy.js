@@ -121,16 +121,14 @@ router.get("/badges", function (req, res) {
   return res.render("badges", { layout: "badges" });
 });
 
-router.get("/survey", function(req, res) {
-  return res.render("survey", { layout: "survey" });
-});
 // get route -> survey
-router.get("/survey", function (req, res) {
-  // send us to the next get function instead.
-  return res.render("survey");
+router.get("/survey", function(req, res) {
+  var hbsObject = { layout: "survey" };
+  return res.render("survey", hbsObject);
 });
 // Select just one plant by an id
 router.get("/findp/:plantId", function(req, res) {
+
   pid = parseInt(req.params.plantId, 10);
 
   db.Plants.find({
