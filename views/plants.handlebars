@@ -1,27 +1,22 @@
-{{!-- <div class="container-plants ">
-
-
-    {{!-- <div class="row" id="searchBar">
-    <div class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">textsms</i>
-          <input type="text" id="autocomplete-input" class="autocomplete" >
-          <label for="autocomplete-input">Search for your new buddy here...</label>
-           <input id="add-plant" type="submit" value="Add a Buddy">
-
-
+<div class="container-plants ">
+    {{!--
+    <div class="row">
+        <div class="col l12">
+            <form>
+                <input type="text" name="search" placeholder="Search for your new buddy..">
+            </form>
         </div>
       </div>
     </div>
   </div> --}}
 
-
-<div class="search"><label>Start typing: <input type="search" id="searchInput" /></label> <button type=button id="clearSearch">Clear</button></div>
+    <div id="custom-templates">
+        <input class="typeahead" type="text" placeholder="Search for Plants">
+    </div>
 
     <div class="row" id="cards">
         {{#each plant}}
-        <div class="col s12 m6 l4">
+        <div class="col s12 m6 l4" name="{{commonName}} {{scientificName}}">
             <div class="card small">
                 <div class="card-image light-blue lighten-5" id="img-plants">
                     <img src="../assets/images/plant.png">
@@ -41,7 +36,7 @@
     </div>
 
 </div>
- --}}
+
 
 
 

@@ -12,14 +12,14 @@
   width: 200px;
 }
 
-td{
-  padding:2px 4px;
-}
+/* .header-plant{
+    color:
+  }  */
 
-.search{
-  padding: 1em;
-}
+  .col {
+    display: none;
+  }
 
-.dontShow{
-  display:none;
-}
+  .dontShow{
+    display:none;
+  }
