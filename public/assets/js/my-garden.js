@@ -3,30 +3,91 @@
 $(".btn-floating").on("click", function() {
   event.preventDefault();
 
+  $.get("/api/my-garden", function(req, res) {
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    } else {
+      // Otherwise send back the user's email and id
+      // Sending back a password, even a hashed password, isn't a good idea
+      res.json({
+        name: req.user.name,
+        email: req.user.email,
+        id: req.user.id
+      });
+    }
+  });
   // Post to new plant db
   $.post("/api/my-garden", {
     plant: $(this).attr("name")
   });
 });
 
-jQuery(document).ready(function() {
-  if ($(".cd-stretchy-nav").length > 0) {
-    var stretchyNavs = $(".cd-stretchy-nav");
+$(function() {
+  $(".col")
+    .slice(0, 6)
+    .show();
+  $("#loadMore").on("click", function(e) {
+    e.preventDefault();
+    $(".col:hidden")
+      .slice(0, 6)
+      .slideDown();
+    if ($(".col:hidden").length == 0) {
+      $("#load").fadeOut("slow");
+    }
+    $("html,body").animate(
+      {
+        scrollTop: $(this).offset().top
+      },
+      1500
+    );
+  });
+});
 
-    stretchyNavs.each(function() {
-      var stretchyNav = $(this),
-        stretchyNavTrigger = stretchyNav.find(".cd-nav-trigger");
-
-      stretchyNavTrigger.on("click", function(event) {
-        event.preventDefault();
-        stretchyNav.toggleClass("nav-is-visible");
-      });
-    });
-
-    $(document).on("click", function(event) {
-      !$(event.target).is(".cd-nav-trigger") &&
-        !$(event.target).is(".cd-nav-trigger span") &&
-        stretchyNavs.removeClass("nav-is-visible");
-    });
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 50) {
+    $(".totop a").fadeIn();
+  } else {
+    $(".totop a").fadeOut();
   }
+});
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 50) {
+    $(".totop a").fadeIn();
+  } else {
+    $(".totop a").fadeOut();
+  }
+});
+
+var $elementList = $(".row").find("div[class*=col]");
+console.log($elementList);
+$(".typeahead").keyup(function(eve) {
+  searchString = $(this)
+    .val()
+    .toLowerCase();
+  searchArray = searchString.split(" ");
+  var len = searchArray.length;
+  $elementList.each(function(index, elem) {
+    $eleli = $(elem);
+    $eleli.removeClass("hideThisLine");
+    var oneLine = $eleli.attr("name").toLowerCase();
+    (match = true), (sal = len);
+    while (sal--) {
+      if (oneLine.indexOf(searchArray[sal]) == -1) {
+        match = false;
+      }
+    }
+    if (!match) {
+      //console.log('this one is gets hidden',searchString);
+      $eleli.addClass("hideThisLine");
+    }
+  });
+  $(".dontShow").removeClass("dontShow");
+  $(".hideThisLine").addClass("dontShow");
+});
+$("#clearSearch").click(function(e) {
+  $("#cBuscador")
+    .val("")
+    .keyup();
 });
