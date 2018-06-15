@@ -28,3 +28,7 @@ body {
   .btn-floating {
     bottom: 20px !important;
   }
+
+  a {
+    color: white ;
+  }

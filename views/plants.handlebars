@@ -4,83 +4,52 @@
     </a>
 </div>
 
+
 <div class="container-plants ">
+    <a href="top"></a>
+
+
     {{!--
-    <div class="row">
-        <div class="col l12">
-            <form>
-                <input type="text" name="search" placeholder="Search for your new buddy..">
-            </form>
+    <div id="custom-templates">
+        <input class="typeahead" type="text" placeholder="Search for Plants" id="top">
+    </div> --}}
+
+    <form autocomplete="off" action="/plants/:">
+        <div class="autocomplete">
+            <input class="typeahead" id="myInput" type="text" name="plant" placeholder="Search for Plants">
         </div>
-    </div>
-</div>
-</div> --}}
+        <div id="submit" class="btn green darken-2">Submit</div>
+    </form>
 
-<div id="custom-templates">
-    <input class="typeahead" type="text" placeholder="Search for Plants" id="top">
-</div>
+    <div class="row" id="cards">
+        {{#each plant}}
+        <div class="col s12 m6 l4 whole" name="top">
+            <div class="card small">
 
-<div class="row" id="cards">
-    {{#each plant}}
-    <div class="col s12 m6 l4" name="{{commonName}} {{scientificName}}">
-        <div class="card small">
+                <div class="card-image light-blue lighten-5" id="img-plants">
+                    <img src="../assets/images/plant.png">
+                    <span class="card-title pink-text accent-1-text">{{commonName}}</span>
+                </div>
 
-            <div class="card-image light-blue lighten-5" id="img-plants">
-                <img src="../assets/images/plant.png">
-                <span class="card-title pink-text accent-1-text">{{commonName}}</span>
+                <div class="card-content">
+
+                    <p>Scientific Name: {{scientificName}}</p>
+                    <p>Watering: {{moistUse}}</p>
+                    <p>Flower Color: {{flowerColor}}</p>
+                    <a class="btn-floating halfway-fab waves-effect waves-light green darken-1" name="{{commonName}}">
+                        <i class="material-icons">add</i>
+                    </a>
+                </div>
+
             </div>
-
-            <div class="card-content">
-
-                <p>Scientific Name: {{scientificName}}</p>
-                <p>Watering: {{moistUse}}</p>
-                <a class="btn-floating halfway-fab waves-effect waves-light green darken-1" name="{{commonName}}">
-                    <i class="material-icons">add</i>
-                </a>
-            </div>
-
         </div>
+        {{/each}}
     </div>
-    {{/each}}
-</div>
 
 </div>
 
 
 
 <button id="loadMore" class="btn waves-effect waves-light green green darken-1">Load more +</button>
-{{!--
-<button class="totop" href="#top">Back to top</button> --}}
 
-<div class="search">
-    <label>Start typing:
-        <input type="search" id="searchInput" />
-    </label>
-    <button type=button id="clearSearch">Clear</button>
-</div>
-<ul id="toSearchFor">
-    <li>
-
-        <div class="row" id="cards">
-            {{#each plant}}
-            <div class="col s12 m6 l4">
-                <div class="card small">
-                    <div class="card-image light-blue lighten-5" id="img-plants">
-                        <img src="../assets/images/plant.png">
-                        <span class="card-title pink-text accent-1-text">{{commonName}}</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light green darken-1" name="{{commonName}}">
-                            <i class="material-icons">add</i>
-                        </a>
-                    </div>
-                    <div class="card-content">
-                        <p>Scientific Name: {{scientificName}}</p>
-                        <p>Watering: {{moistUse}}</p>
-
-                    </div>
-                </div>
-            </div>
-            {{/each}}
-        </div>
-
-    </li>
-    </table>
+<button class="btn waves-effect waves-light green green darken-1 white-text"><a href="#top">Back to top</a></button>

@@ -19,6 +19,7 @@ var pusher = new Pusher({
   encrypted: true
 });
 
+
 // HTML ROUTES
 // get route -> index
 router.get("/", function (req, res) {
@@ -117,6 +118,21 @@ router.get("/plants", function (req, res) {
 
 });
 
+// get route -> plants
+router.get("/allplants", function (req, res) {
+
+
+  // .findAll sequelize function
+  db.Plants.findAll({
+    order: [["commonName", "ASC"]]
+  })
+    // use promise method to pass the plants...
+    .then(function (dbp) {
+      res.json(dbp);
+    });
+
+});
+
 router.get("/badges", function (req, res) {
   return res.render("badges", { layout: "badges" });
 });
@@ -134,6 +150,36 @@ router.get("/findp/:plantId", function(req, res) {
   db.Plants.find({
     where: {
       id: pid
+    }
+  }).then(plant => {
+    console.log(plant);
+    return res.json(plant);
+  });
+});
+
+// Select just one plant by an id
+router.get("/findp/:plantId", function(req, res) {
+
+  pid = parseInt(req.params.plantId, 10);
+
+  db.Plants.find({
+    where: {
+      id: pid
+    }
+  }).then(plant => {
+    console.log(plant);
+    return res.json(plant);
+  });
+});
+
+// Select just one plant by an id
+router.get("/getplant/:plantName", function(req, res) {
+
+  pid = parseInt(req.params.plantName, 10);
+
+  db.Plants.find({
+    where: {
+      [Op.or]: [{commonName: pid}, {scientificName: pid}]
     }
   }).then(plant => {
     console.log(plant);
