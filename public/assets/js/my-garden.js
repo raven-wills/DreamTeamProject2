@@ -194,19 +194,6 @@ $.get("/allplants", function (req, res) {
 
 });
 
-// $("#submit").on("click", function () {
-//     event.preventDefault();
-//     var plant = $(".typeahead").val();
-
-//     $.get("/getplant/" + plant, function (data) {
-
-//         plantObj = data;
-
-
-//     });
-
-// })
-
 /*initiate the autocomplete function on the "myInput" element, and pass along the allplants array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), allplants);
 
