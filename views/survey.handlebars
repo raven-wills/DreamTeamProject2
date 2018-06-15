@@ -1,15 +1,39 @@
+<nav class="cd-stretchy-nav">
+    <a class="cd-nav-trigger" href="#0">
+        Menu
+        <span aria-hidden="true"></span>
+    </a>
 
+    <ul>
+        <li>
+            <a href="/" class="active">
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="/my-garden">
+                <span>Garden</span>
+            </a>
+        </li>
+        <li>
+            <a href="/sign-out">
+                <span>Logout</span>
+            </a>
+        </li>
+    </ul>
 
+    <span aria-hidden="true" class="stretchy-nav-bg"></span>
+</nav>
 <div class="survey">
-       <h1>PotBuddy Survey</h1>
-       <div class="surveyQuestions" onclick="showQuestions()">
-           <h2>Ready?</h2>
-       </div>
-       <div id="ans1" class = "qn" onclick="nextQuestion(this)"></div>
-       <div id="ans2" class = "qn" onclick="nextQuestion(this)"></div>
-       <div id="ans3" class = "qn" onclick="nextQuestion(this)"></div>
-       <div id="ans4" class = "qn" onclick="nextQuestion(this)"></div>
+    <h1 id="surveyTitle">PotBuddy Survey</h1>
+    <div class="surveyQuestions" onclick="showQuestions()">
+        <h2>Ready?</h2>
+    </div>
+    <div id="ans1" class="qn" onclick="nextQuestion(this)"></div>
+    <div id="ans2" class="qn" onclick="nextQuestion(this)"></div>
+    <div id="ans3" class="qn" onclick="nextQuestion(this)"></div>
+    <div id="ans4" class="qn" onclick="nextQuestion(this)"></div>
 
-        <div id="findplant"></div>
+    <div id="findplant"></div>
 
 </div>
