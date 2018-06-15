@@ -1,67 +1,99 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin:0;
+    padding:0;
 }
 body {
   /* font-family: "Vibur", cursive; */
-  background-image: url("http://www.pixxelfactory.net/jInvertScroll/images/horizon.png");
+  background-image: url("../images/moregrass.jpg");
+  background-size: 110%;
+  background-repeat: no-repeat;
 }
 
-.container {
-  position: fixed;
-}
 
 #messageContainer {
   height: 400px;
-  width: 50vw;
-  background: rgb(219, 238, 228);
-  margin: 5vh 50vh;
+  width: 40vw;
+  background: rgb(219,238,228);
+  margin-top: 1vh;
+  margin-left: 12vw;
+  margin-right: 5vw;
   padding: 10px 20px 10px;
   border-radius: 10px;
   overflow: auto;
   word-wrap: break-word;
   box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-.form-group {
-  margin: 0 50vh;
-  float: right;
+  float: left;
 }
 
 button {
   background-color: #8ac57f;
   color: white;
-  border-radius: 10px;
-  height: 40px;
+  border-radius: 5px;
+  height: 36px;
   width: 80px;
-  font-size: 20px;
+  margin-top: 10px;
+  font-size: 16px;
   font-style: normal;
-  float: right;
-  transition: 0.4s;
-  margin-right: 50vh;
-  transition: 0.4s;
+
+  transition: 0.2s;
+
+
+  font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 
 button:hover {
   background-color: #b6daaf;
   background-position: right top;
+  cursor: pointer;
 }
 
-textarea {
-  min-width: 50vw;
+label {
+  margin-top: 4vh;
+  margin-left: 10vw;
+  display: block;
+}
+
+input {
+
+  width: 30vw;
   margin: 10px 0;
-  padding: 3px;
+  padding: 0.375rem 0.5rem;
   border: 0px solid white;
   border-radius: 5px;
   box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  font-size: 0.9375rem;
 }
 
-label {
-  margin: 10px;
-  font-family: sans-serif;
+::placeholder {
+  font-size: 0.9375rem;
 }
+
+#chatSubmit {
+  margin-top: 10px;
+}
+
+#connHeading {
+  margin-top: 10vh;
+  margin-left: 10vw;
+}
+
+#connectionList {
+  height: 180px;
+  width: 30vw;
+  margin-top: .5rem;
+  margin-left: 10vw;
+  padding: 0.375rem 0.75rem;
+  border-radius: 5px;
+  overflow: auto;
+  word-wrap: break-word;
+  color: #212529;
+  background-color: #ffffff;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
 
 .authorName {
   font-size: 16px;
@@ -75,12 +107,14 @@ label {
 .messageBody {
   margin-top: -4px;
   margin-bottom: 2px;
+
 }
 
 .messageComplete {
   max-width: 280px;
   border-radius: 10px;
 }
+
 
 /* -------------------------------- 
   Stretchy Nav style - common to:

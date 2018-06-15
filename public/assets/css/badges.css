@@ -251,7 +251,10 @@ html {
 
 body {
   margin: 0;
-  background-image: url("http://www.pixxelfactory.net/jInvertScroll/images/horizon.png");
+  background-image: url("../images/moregrass.jpg");
+  background-size: 210%;
+  background-repeat: no-repeat;
+  background-position: center;
   font-size: 1.3em;
   color: #444;
   font-family: "Merriweather", sans-serif;

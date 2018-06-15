@@ -6,7 +6,14 @@
 }
 
 body {
-  background-image: url("http://www.pixxelfactory.net/jInvertScroll/images/horizon.png");
+
+  background-image: url("../images/moregrass.jpg");
+  background-size: 325vh;
+  background-repeat: repeat-x;
+  background-position: center center;
+  background-attachment: scroll;
+
+    
   font-family: "Josefin Slab", serif;
   font-size: 34px;
   /* font-style: italic; */
@@ -26,9 +33,14 @@ body {
   width: 900px;
   float: left;
   height: 95%;
-
   color: rgb(143, 46, 130) !important;
   text-shadow: 1px 1px 2px #d2d0d0;
+}
+
+
+
+.card-content {
+  padding-bottom: 10px;
 }
 
 .section h2 {
@@ -46,8 +58,8 @@ body {
 .card {
   position: relative;
   margin: 0.5rem 0 1rem 0;
-  background-color: #fff;
-  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }

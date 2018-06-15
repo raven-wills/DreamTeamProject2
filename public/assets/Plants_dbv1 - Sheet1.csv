@@ -1,0 +1,205 @@
+id,Scientific Name,Common Name,Flower Color,Flower Conspicuous,Foliage Color,Shape and Orientation,Hedge Tolerance,Anaerobic Tolerance,CaCO3 Tolerance,Drought Tolerance,Shade Tolerance,Lifespan,"Frost Free Days, Minimum",Bloom Period,"Height at Base Age, Maximum (feet)","Height, Mature (feet)","Root Depth, Minimum (inches)","Temperature, Minimum (°F)",Moisture Use / Watering,Precipitation (Minimum),Precipitation (Maximum),Known Allelopath,Nitrogen Fixation,Resprout Ability,Toxicity,Salinity Tolerance,Commercial Availability,Protein Potential
+1,Calliandra eriophylla,fairy duster,Purple,Yes,Green,Rounded,High,None,High,High,Intolerant,Moderate,240,Early Spring,1,3,12,28,Low,2,10,No,Low,Yes,None,None,Field Collections Only,Medium
+2,Caesalpinia gilliesii,bird of paradise,White,Yes,Dark Green,Erect,None,None,High,High,Intolerant,Long,320,Early Spring,20,35,12,27,Low,2,10,No,Low,No,None,Low,Contracting Only,Low
+3,Atriplex polycarpa,Cattle spinach,Yellow,No,Green,Semi-Erect,Medium,None,High,High,Intolerant,Moderate,170,Mid Summer,6,6,10,7,Medium,3,12,No,None,Yes,None,High,Field Collections Only,Low
+4,Acacia constricta,"whitethorn acacia,",Yellow,Yes,Green,Erect,High,None,High,High,Intolerant,Moderate,250,Late Spring,6,9,12,-13,Low,4,20,No,Low,Yes,Slight,Medium,Field Collections Only,Medium
+5,Atriplex lentiformis,Saltbush,Yellow,No,Green,Semi-Erect,High,High,High,High,Intolerant,Moderate,195,Early Summer,10,10,20,7,Low,4,20,No,None,Yes,None,High,Routinely Available,Low
+6,Ambrosia dumosa,Burrobush,Yellow,No,Green,Semi-Erect,None,None,High,High,Intolerant,Short,250,Late Winter,2,2,12,-11,Low,4,11,No,None,No,None,Medium,Field Collections Only,Low
+7,Agave utahensis,Utah agave,Yellow,Yes,Dark Green,Erect,Low,None,High,High,Intolerant,Moderate,120,Mid Spring,1,1,6,-23,Low,5,24,No,None,No,None,None,Contracting Only,Low
+8,Artemisia tridentata,Big sagebrush,Yellow,No,Green,Semi-Erect,Low,None,High,High,Intolerant,Long,90,Mid Summer,3,4,20,-43,Medium,6,16,No,None,No,None,Medium,Routinely Available,Medium
+9,Atriplex nummularia,Old Man Saltbush,Yellow,No,Gray-Green,Erect,High,None,High,High,Intolerant,Long,150,Winter,9,9,20,-8,Low,7,17,No,None,Yes,None,High,Routinely Available,Medium
+10,Arctostaphylos glauca,Bigberry manzanita,White,Yes,Dark Green,Erect,Medium,None,Low,High,Intermediate,Long,260,Late Winter,10,18,30,12,Low,8,16,No,None,Yes,None,None,Contracting Only,None
+11,Arctostaphylos pungens,Pointleaf manzanita,White,No,Dark Green,Erect,Medium,None,Low,High,Intermediate,Long,300,Late Winter,6,12,30,22,Low,8,18,No,None,Yes,None,None,Contracting Only,None
+12,Anisacanthus thurberi,Desert honeysuckle,Red,Yes,Green,Rounded,Medium,None,Medium,High,Intolerant,Long,210,Mid Spring,4,4.5,18,-3,Low,8,14,No,None,Yes,None,Low,No Known Source,Low
+13,Acer glabrum,Rocky Mountain maple,Green,No,Green,Erect,Medium,Low,Medium,Medium,Intermediate,Moderate,180,Late Spring,15,30,24,-43,Low,9,60,No,None,Yes,None,None,Routinely Available,None
+14,Amorpha fruticosa,Indigo bush,Purple,No,Green,Climbing,Low,None,Medium,Medium,Intolerant,Moderate,100,Late Spring,6,15,24,-38,Low,10,65,No,Medium,No,Slight,Low,Routinely Available,Medium
+15,Berberis fendleri,Colorado Barberry,Yellow,Yes,Green,Rounded,Low,None,High,High,Intolerant,Moderate,185,Mid Spring,6,6,16,-18,Low,10,40,No,None,Yes,None,Medium,Contracting Only,None
+16,Alnus incana ssp. tenuifolia,Thinleaf alder,Purple,No,Dark Green,Erect,Medium,High,None,Low,Intermediate,Moderate,130,Early Spring,20,20,18,-62,High,10,20,No,Medium,Yes,None,None,Routinely Available,None
+17,Abies grandis,Giant fir,,No,Green,Conical,Low,Low,Low,Medium,Tolerant,Long,60,Late Spring,25,150,20,-33,Medium,11,100,No,None,No,None,None,Field Collections Only,Low
+18,Arbutus arizonica,Arizona madrone,White,Yes,Dark Green,Rounded,Low,None,Medium,High,Intolerant,Long,290,Late Spring,20,30,48,-4,Low,11,24,No,None,Yes,None,Low,Contracting Only,None
+19,Amelanchier utahensis var. utahensis,Utah serviceberry,White,Yes,Green,Semi-Erect,Medium,Low,High,High,Intolerant,Long,145,Late Spring,10,15,12,-23,Medium,12,60,No,None,Yes,None,None,Contracting Only,High
+20,Baccharis pilularis,Coyotebrush,White,Yes,Green,Prostrate,High,None,High,High,Intolerant,Long,210,Late Summer,10,10,20,22,Low,12,30,No,None,Yes,None,High,Routinely Available,Low
+21,Alnus viridis ssp. crispa,Green alder,Yellow,No,Green,Erect,Medium,High,Low,None,Intermediate,Moderate,80,Summer,10,10,20,-62,High,12,60,No,Low,Yes,None,None,Routinely Available,None
+22,Arctostaphylos patula,Greenleaf manzanita,White,No,Green,Semi-Erect,Low,None,Medium,High,Intermediate,Long,120,Late Spring,5,6,20,-28,Medium,13,60,Yes,None,Yes,None,None,Routinely Available,Low
+23,Arctostaphylos manzanita,Whiteleaf manzanita,White,No,Green,Semi-Erect,Low,None,Medium,High,Intermediate,Long,120,Winter,6,8,20,-23,Low,14,60,No,None,Yes,None,None,Contracting Only,Low
+24,Antennaria luzuloides,rush pussytoes,White,Yes,Gray-Green,Semi-Erect,None,Low,Medium,Medium,Intolerant,Long,90,Late Spring,2,2,12,-33,Medium,14,28,No,None,Yes,None,None,No Known Source,Low
+25,Arbutus menziesii,Pacific madrone,White,Yes,Green,Rounded,None,None,Low,High,Intermediate,Long,200,Mid Spring,25,80,24,13,Low,15,163,No,None,Yes,None,None,Routinely Available,None
+26,Alnus viridis ssp. sinuata,Sitka alder,,No,Yellow-Green,Erect,Low,Low,Low,Low,Intermediate,Long,90,Summer,10,16,10,-48,High,16,200,No,Low,Yes,None,None,Routinely Available,Low
+27,Acer glabrum var. douglasii,Douglas maple,Green,No,Green,Erect,None,None,Low,Low,Tolerant,Moderate,120,Late Spring,20,30,24,-13,Medium,16,50,No,None,Yes,None,None,Contracting Only,Low
+28,Arctostaphylos nevadensis,Pinemat Manzanita,White,No,Green,Decumbent,None,None,Medium,High,Tolerant,Long,180,Early Summer,2,2,30,-13,Low,16,80,No,None,Yes,None,None,Routinely Available,Low
+29,Abies concolor,White Fir,Red,No,Green,Conical,Low,None,Low,Medium,Intermediate,Long,80,Late Spring,20,120,40,-38,Medium,18,80,No,None,No,None,None,Routinely Available,Low
+30,Amorpha canescens,Lead Plant,Purple,Yes,Green,Semi-Erect,None,None,High,High,Tolerant,Long,100,Early Summer,4,4,20,-38,Low,20,45,No,Medium,No,None,Low,Routinely Available,Low
+31,Abies lasiocarpa,Rocky Mountain Fir,,No,Green,Conical,Low,None,Low,Low,Tolerant,Long,120,Late Spring,15,90,40,-51,Medium,20,150,No,None,No,None,None,Routinely Available,Low
+32,Catalpa speciosa,Northern Catalpa,White,Yes,Dark Green,Erect,None,None,Low,Medium,Intolerant,Long,90,Early Summer,20,60,20,-38,Low,20,80,No,Low,Yes,None,Low,Routinely Available,Low
+33,Acer saccharum,Sugar Maple,Green,No,Green,Erect,None,None,Medium,Medium,Tolerant,Long,80,Mid Spring,20,100,40,-47,Medium,22,80,Yes,None,Yes,None,None,Routinely Available,None
+34,Carpinus caroliniana,American HornBeam,Orange,Yes,Green,Erect,Low,Low,Low,Low,Tolerant,Short,80,Mid Spring,18,30,20,-34,Medium,23,80,No,None,Yes,None,None,Routinely Available,Low
+35,Acer pensylvanicum,Snakebark Maple,Yellow,No,Green,Erect,None,None,Low,Low,Tolerant,Short,90,Late Spring,25,35,28,-47,Low,24,76,Yes,None,Yes,None,None,No Known Source,None
+36,Casuarina cunninghamiana,River She-Oak,Red,No,Green,Erect,Medium,Medium,Medium,Low,Intolerant,Short,300,Mid Spring,50,100,24,22,Medium,25,60,No,Low,Yes,None,Low,Routinely Available,None
+37,Casuarina equisetifolia,Australian Pine Tree,Red,No,Green,Erect,Medium,Low,Medium,Low,Intolerant,Short,300,Mid Spring,50,100,24,22,Medium,25,60,No,Low,No,None,High,Routinely Available,None
+38,Casuarina glauca,Swamp Oak,Red,No,Green,Erect,Medium,High,Medium,Low,Intolerant,Short,280,Mid Spring,40,60,24,17,Medium,25,60,No,Low,Yes,None,High,Routinely Available,None
+39,Amelanchier arborea,Common Serviceberry,White,Yes,Dark Green,Erect,Low,Medium,None,Low,Tolerant,Moderate,120,Mid Spring,25,36,20,-47,Medium,26,80,No,None,Yes,None,Low,Contracting Only,None
+40,Abelia ×grandiflora,Glossy Abelia,Purple,Yes,Dark Green,Semi-Erect,High,None,Medium,Medium,Tolerant,Moderate,150,Late Summer,6,6,12,-13,Medium,28,60,No,None,Yes,None,Low,Routinely Available,Low
+41,Betula lenta,Black Birch,Yellow,No,Green,Erect,None,None,Low,Medium,Intolerant,Moderate,90,Late Spring,15,60,28,-26,Medium,29,80,No,None,Yes,None,Medium,Field Collections Only,
+42,Acer spicatum,Mountain Maple,Yellow,No,Green,Erect,None,Low,Medium,Low,Tolerant,Moderate,100,Spring,25,25,32,-47,Medium,30,70,No,None,Yes,None,None,No Known Source,Low
+43,Acer ginnala,Amur Maple,White,No,Green,Rounded,Medium,None,Medium,Low,Intermediate,Moderate,130,Mid Spring,15,20,24,-38,Medium,30,60,No,None,Yes,None,Medium,Routinely Available,None
+44,Carya laciniosa,Shellbark Hickory,Yellow,No,Green,Erect,None,Low,High,Low,Tolerant,Long,150,Mid Spring,35,100,60,-22,High,30,60,No,None,Yes,None,None,Routinely Available,Low
+45,Carya glabra,Pignut Hickory,Yellow,No,Green,Erect,None,None,High,High,Intermediate,Moderate,140,Mid Spring,30,80,50,-30,Medium,30,80,No,None,Yes,None,None,Contracting Only,Low
+46,Catalpa bignonioides,Southern catalpa,White,Yes,Green,Erect,Low,None,Medium,Medium,Intermediate,Long,140,Mid Spring,66,66,36,-18,Low,30,65,No,None,Yes,None,None,Routinely Available,None
+47,Amorpha glabra,mountain false indigo,Purple,Yes,Green,Erect,None,None,High,Medium,Intermediate,Long,150,Mid Spring,16,16,20,-3,Medium,32,60,No,Medium,Yes,Slight,None,Contracting Only,Low
+48,Acer platanoides,Norway maple,Green,No,Green,Rounded,Medium,None,Medium,Low,Intermediate,Moderate,130,Early Spring,25,50,40,-28,Medium,32,50,No,None,Yes,None,Medium,Routinely Available,None
+49,Abies magnifica,Red fir,Brown,No,Dark Green,Erect,Low,None,Low,Low,Tolerant,Long,90,Late Spring,35,150,20,-23,Medium,33,64,No,None,No,None,Low,Contracting Only,Low
+50,Amelanchier laevis,"Allegheny serviceberry,",White,Yes,Green,Erect,Low,Medium,Medium,Medium,Tolerant,Short,85,Early Spring,30,35,30,-38,Medium,34,60,No,None,Yes,None,Low,No Known Source,Low
+51,Amelanchier sanguinea,Roundleaf serviceberry,White,Yes,Green,Erect,Low,Low,Low,Medium,Tolerant,Moderate,100,Late Spring,10,10,24,-43,Medium,35,55,No,None,Yes,None,None,No Known Source,None
+52,Castanea mollissima,Chinese chestnut,Yellow,Yes,Green,Erect,None,None,Medium,Low,Intolerant,Short,180,Mid Spring,25,50,36,-20,Medium,35,50,No,None,Yes,None,None,Routinely Available,Low
+53,Castanea dentata,American chestnut,White,No,Yellow-Green,Erect,None,None,None,Medium,Intolerant,Long,150,Early Summer,35,115,20,-33,Medium,35,60,No,None,Yes,None,None,Field Collections Only,Low
+54,Asimina triloba,Pawpaw,Purple,No,Dark Green,Erect,Low,Low,Medium,Low,Tolerant,Short,160,Mid Spring,25,25,20,-27,Medium,36,80,No,None,Yes,None,None,Routinely Available,Low
+55,Aesculus flava,yellow buckeye,Yellow,Yes,Green,Erect,None,None,Medium,Low,Tolerant,Long,150,Late Spring,30,65,36,-18,High,39,84,No,None,Yes,Severe,None,No Known Source,None
+56,Calophyllum antillanum,Alexandrian laurel,Orange,Yes,Green,Erect,None,None,Low,Medium,Intermediate,Moderate,365,Late Spring,60,65,40,36,Low,39,197,No,None,No,None,Medium,Routinely Available,None
+57,Aesculus sylvatica,painted buckeye,Yellow,Yes,Green,Erect,None,Low,Medium,Low,Intermediate,Long,200,Mid Spring,30,65,36,7,High,40,80,No,None,Yes,Severe,None,No Known Source,None
+58,Aesculus californica,California buckeye,White,No,Red,Erect,None,None,Low,High,Intermediate,Long,175,Summer,25,25,36,2,Medium,40,75,No,None,Yes,Severe,None,Contracting Only,None
+59,Abies fraseri,Fraser fir,Purple,No,Dark Green,Erect,Low,Low,Low,Low,Tolerant,Moderate,90,Mid Spring,20,55,6,-23,Medium,45,100,No,None,Yes,None,Low,Routinely Available,Low
+60,Abies procera,Noble fir,,No,Dark Green,Erect,Low,None,Low,Low,Intermediate,Long,50,Late Spring,25,230,20,-23,Low,64,120,No,None,No,None,None,Contracting Only,Low
+61,Baccharis sarothroides,Desert broom,Yellow,Yes,Green,Erect,Low,Low,High,High,Intolerant,Short,240,Late Winter,12,12,12,28,Low,2,10,No,None,No,Slight,Medium,Contracting Only,Low
+62,Acacia greggii,Wait-a-minute bush,Yellow,Yes,Green,Erect,High,None,High,High,Intolerant,Long,250,Mid Spring,15,20,12,-13,Low,3,20,No,None,Yes,None,None,Field Collections Only,Medium
+63,Atriplex confertifolia,shadscale saltbush,Yellow,No,Green,Semi-Erect,Medium,None,High,High,Intolerant,Moderate,165,Early Summer,3,3,10,-38,Medium,4,12,Yes,None,No,None,High,Routinely Available,Medium
+64,Atriplex gardneri,Gardner's saltbush,Yellow,No,Gray-Green,Semi-Erect,None,None,High,High,Intolerant,Long,110,Late Summer,4,4,20,-38,Low,5,12,No,None,Yes,None,High,Routinely Available,Medium
+65,Atriplex falcata,sickle saltbush,Yellow,No,Gray-Green,Semi-Erect,Low,None,High,High,Intermediate,Long,100,Fall,2,2,20,-38,Low,5,12,No,None,Yes,Slight,High,No Known Source,High
+66,Atriplex canescens,Fourwing saltbush,Yellow,No,Green,Semi-Erect,Medium,None,High,High,Intolerant,Moderate,115,Late Spring,4,4,20,-43,Medium,5,18,No,None,Yes,None,High,Routinely Available,Medium
+67,Adenostoma fasciculatum,Chamise,White,No,Dark Green,Semi-Erect,High,None,Low,High,Intolerant,Moderate,120,Mid Spring,6,10,8,32,Medium,6,30,Yes,None,Yes,None,Medium,Contracting Only,Medium
+68,Artemisia tridentata ssp. tridentata,basin big sagebrush,Green,Yes,Gray-Green,Rounded,High,None,High,High,Intolerant,Moderate,90,Late Summer,9,9,16,-13,Low,6,35,No,None,No,None,Low,Routinely Available,Low
+69,Artemisia nova,black sagebrush,Brown,No,Green,Decumbent,Low,None,Medium,High,Intolerant,Long,90,Late Summer,2,2,10,-23,Low,6,20,No,None,Yes,None,Medium,Routinely Available,Medium
+70,Artemisia tripartita,threetip sagebrush,Green,No,Gray-Green,Rounded,High,None,High,High,Intolerant,Moderate,90,Late Summer,1,4,12,-43,Low,6,35,No,None,No,None,Low,No Known Source,Low
+71,Artemisia arbuscula,little sagebrush,White,No,Gray-Green,Oval,Low,None,High,High,Intolerant,Long,90,Late Summer,2,2,10,-43,Low,7,20,No,None,No,None,Medium,No Known Source,Medium
+72,Artemisia cana,Silver sagebrush,Yellow,No,Gray-Green,Erect,High,None,Medium,High,Intolerant,Long,90,Late Summer,5,5,20,-43,Low,8,40,No,None,Yes,None,Low,Routinely Available,Medium
+73,Artemisia tridentata ssp. wyomingensis,Wyoming Sagebrush,Yellow,No,Gray-Green,Erect,Low,None,High,High,Intolerant,Long,90,Late Summer,3,3,20,-33,Medium,8,20,No,None,No,None,Low,Field Collections Only,Medium
+74,Betula occidentalis,Red birch,Yellow,No,Green,Erect,None,Medium,Low,Low,Intermediate,Short,140,Mid Spring,25,25,20,-62,High,10,70,No,None,Yes,None,None,Routinely Available,None
+75,Baccharis salicifolia,Mule fat,Yellow,Yes,Yellow-Green,Erect,Low,Low,High,Low,Intolerant,Short,160,Mid Spring,10,10,12,-3,Medium,10,18,No,None,Yes,None,High,Routinely Available,Low
+76,Artemisia tridentata ssp. vaseyana,mountain big sagebrush,,No,Gray-Green,Erect,Low,None,High,Medium,Intolerant,Long,90,Fall,5,7,16,-43,Low,11,45,No,None,No,None,Low,Routinely Available,Medium
+77,Amelanchier alnifolia,askatoon serviceberry,White,Yes,Green,Erect,High,None,High,Low,Intermediate,Short,100,Early Summer,15,15,24,-62,Medium,12,140,No,None,Yes,None,Low,Routinely Available,High
+78,Amelanchier utahensis,Utah serviceberry,White,Yes,Green,Erect,High,None,High,High,Intermediate,Long,110,Late Spring,10,15,24,-28,Medium,12,45,No,None,Yes,None,None,Routinely Available,High
+79,Betula papyrifera,Paper birch,Yellow,Yes,Green,Erect,Low,Low,Low,Low,Intolerant,Moderate,80,Mid Spring,40,70,24,-62,High,12,60,No,None,Yes,None,Medium,Routinely Available,Low
+80,Abies balsamea,Balsam fir,Yellow,No,Green,Conical,Low,None,Low,Low,Tolerant,Short,80,Mid Summer,18,60,20,-43,Medium,13,60,No,None,No,None,None,Routinely Available,Low
+81,Arctostaphylos columbiana,Hairy Manzanita,White,Yes,Green,Irregular,Medium,None,None,Low,Intermediate,Moderate,300,Early Spring,20,6,7,7,Low,13,35,No,None,No,None,None,No Known Source,Low
+82,Betula nana,Dwarf birch,Green,No,Green,Decumbent,Low,Low,Low,Medium,Intermediate,Moderate,80,Late Spring,2,3,18,-43,Low,14,30,No,None,Yes,None,None,Contracting Only,None
+83,Ailanthus altissima,Tree of heaven,Green,Yes,Green,Rounded,Low,Medium,High,Medium,Intolerant,Short,150,Late Spring,50,55,30,-18,Medium,14,90,Yes,None,Yes,Moderate,Medium,Routinely Available,Low
+84,Acer negundo,Boxelder maple,White,No,Green,Erect,None,Medium,High,High,Tolerant,Short,100,Early Spring,35,60,40,-46,Medium,15,75,No,None,Yes,None,Medium,Routinely Available,Low
+85,Betula pumila,Bog birch,Yellow,Yes,Dark Green,Semi-Erect,None,High,Low,Low,Intolerant,Short,90,Mid Spring,20,20,18,-38,Medium,16,60,No,None,No,None,None,Routinely Available,None
+86,Acacia melanoxylon,Australian blackwood,White,Yes,Dark Green,Erect,Medium,None,Low,High,Intolerant,Short,180,Early Spring,40,40,28,14,Medium,16,40,No,Medium,Yes,None,Low,No Known Source,Low
+87,Acacia longifolia,Golden wattle,Yellow,Yes,Green,Semi-Erect,High,None,Low,High,Intolerant,Short,180,Summer,20,20,24,14,Medium,16,40,No,Medium,Yes,None,Low,Routinely Available,Low
+88,Acacia cyclops,Coastal wattle,Yellow,Yes,Dark Green,Semi-Erect,High,None,Low,High,Intolerant,Short,180,Mid Spring,12,12,18,14,Medium,16,40,No,Medium,Yes,None,Medium,Field Collections Only,Low
+89,Acer grandidentatum,Bigtooth maple,Yellow,Yes,Green,Erect,None,Low,None,Low,Intermediate,Short,100,Spring,20,38,24,-31,Medium,16,30,No,None,Yes,None,None,Routinely Available,None
+90,Alnus rhombifolia,White alder,Green,No,Green,Erect,Medium,Low,None,Low,Tolerant,Long,200,Fall,50,65,12,-24,High,20,125,No,Low,Yes,None,None,Routinely Available,Low
+91,Alnus glutinosa,Black alder,Purple,No,Green,Erect,Low,Low,Low,Medium,Intermediate,Moderate,130,Mid Spring,40,45,16,-18,Medium,20,65,No,High,Yes,None,Low,Routinely Available,High
+92,Acer saccharinum,Silver maple,Yellow,Yes,Green,Rounded,None,High,Medium,Low,Intermediate,Moderate,120,Early Spring,45,90,32,-47,Medium,20,70,No,None,Yes,None,Low,Routinely Available,Low
+93,Calocedrus decurrens,California incense-cedar,Yellow,No,Green,Conical,None,None,Low,Medium,Intermediate,Long,100,Late Spring,12,100,60,-25,Low,20,80,No,None,No,None,None,Routinely Available,None
+94,Amelanchier alnifolia var. semiintegrifolia,Pacific serviceberry,White,Yes,Green,Rounded,Medium,None,Low,Low,Intolerant,Long,60,Late Spring,20,20,20,-43,Low,20,50,No,None,Yes,None,None,Contracting Only,None
+95,Alnus incana ssp. rugosa,Grey alder,Yellow,No,Dark Green,Semi-Erect,Low,High,Medium,Low,Intermediate,Long,80,Early Spring,16,16,24,-47,Medium,21,65,No,Low,Yes,None,Low,Routinely Available,Low
+96,Acer macrophyllum,Bigleaf maple,Yellow,No,Green,Erect,None,Medium,Low,Low,Intermediate,Moderate,140,Mid Spring,30,60,24,-14,Medium,22,260,No,None,Yes,None,None,Contracting Only,None
+97,Alnus rubra,Red alder,Red,No,Green,Erect,High,Low,Low,Medium,Intolerant,Short,180,Early Spring,50,90,25,-22,High,24,220,No,High,Yes,None,None,Routinely Available,Low
+98,Acer nigrum,Black maple,Yellow,No,Green,Erect,None,Low,Medium,Medium,Tolerant,Moderate,130,Late Spring,28,100,30,-47,Medium,24,60,No,None,Yes,None,None,No Known Source,None
+99,Acer circinatum,Vine maple,Green,Yes,Green,Erect,None,None,None,Low,Tolerant,Long,200,Spring,15,20,24,-13,Medium,24,80,No,None,Yes,None,None,No Known Source,None
+100,Acer rubrum,Red maple,Red,Yes,Green,Rounded,Low,Medium,High,Medium,Intermediate,Short,80,Early Spring,35,68,30,-47,High,25,80,No,None,Yes,Slight,None,Routinely Available,Low
+101,Betula alleghaniensis,Swamp birch,Yellow,No,Green,Erect,Medium,Low,Low,Medium,Intermediate,Moderate,60,Late Spring,25,75,30,-47,Medium,25,80,Yes,None,No,None,Medium,Field Collections Only,
+102,Carya cordiformis,Bitternut hickory,Green,No,Green,Erect,None,Low,High,High,Intolerant,Moderate,120,Mid Spring,30,75,50,-47,Medium,25,70,No,None,Yes,None,None,Routinely Available,Low
+103,Cajanus cajan,Pigeon pea,Yellow,Yes,Green,Erect,Medium,Low,High,High,Intermediate,Short,365,Indeterminate,10,10,16,31,Low,25,150,No,Medium,Yes,None,Medium,Routinely Available,Medium
+104,Carya illinoinensis,Pecan,Yellow,No,Yellow-Green,Erect,Low,None,Low,Low,Intolerant,Long,180,Early Spring,35,120,32,-21,High,28,79,No,None,Yes,None,None,Routinely Available,Low
+105,Carya ovata,Shagbark Hickory,Yellow,Yes,Green,Erect,None,None,Medium,Medium,Intermediate,Long,140,Late Spring,15,75,48,-40,Medium,29,80,No,None,Yes,None,Low,Routinely Available,None
+106,Amelanchier canadensis,Canadian serviceberry,White,Yes,Green,Erect,High,Medium,High,Low,Intermediate,Long,110,Mid Spring,20,23,20,-33,Medium,30,60,No,None,Yes,None,Medium,Routinely Available,High
+107,Aesculus glabra,Ohio Buckeye,Green,Yes,Green,Erect,None,None,Medium,Medium,Tolerant,Short,145,Mid Spring,25,68,36,-33,Medium,30,60,No,None,Yes,Severe,None,Routinely Available,None
+108,Betula nigra,River birch,Brown,No,Green,Erect,None,Medium,None,Low,Intolerant,Short,150,Mid Spring,35,70,20,-31,High,30,80,No,None,Yes,None,None,Routinely Available,Low
+109,Amelanchier obovalis,Coastal serviceberry,White,Yes,Dark Green,Erect,Low,None,Low,Low,Intolerant,Long,180,Early Spring,10,10,24,-23,Medium,30,90,No,None,Yes,None,None,No Known Source,None
+110,Albizia julibrissin,Persian silk tree,White,Yes,White-Gray,Erect,Low,Low,High,Medium,Intolerant,Short,200,Mid Summer,20,20,30,2,Medium,30,60,No,Medium,Yes,None,Low,Routinely Available,Low
+111,Berberis thunbergii,Japanese barberry,Yellow,Yes,Dark Green,Rounded,High,None,None,Low,Intolerant,Moderate,180,Late Spring,6,6,18,-28,Medium,30,60,No,None,Yes,None,Low,Routinely Available,None
+112,Alnus serrulata,Smooth Alder,,No,Green,Erect,None,High,Low,Low,Intolerant,Moderate,120,Spring,12,30,24,-23,High,32,60,No,Medium,No,None,None,Routinely Available,Low
+113,Alnus incana,Grey alder,,No,Green,Erect,None,High,Low,Low,Intermediate,Short,100,Spring,15,25,24,-33,High,32,60,No,Medium,No,None,None,Routinely Available,Low
+114,Acer pseudoplatanus,Sycamore maple,Green,No,Yellow-Green,Erect,Medium,None,Low,Medium,Intolerant,Moderate,140,Late Spring,60,70,48,-23,Medium,32,60,No,None,Yes,None,Medium,No Known Source,Low
+115,Avicennia germinans,black mangrove,White,Yes,Dark Green,Vase,Low,Medium,Medium,Low,Intolerant,Long,328,Indeterminate,50,30,24,10,High,34,81,Yes,None,Yes,Slight,Medium,Routinely Available,Low
+116,Aralia spinosa,devil's walkingstick,White,Yes,Green,Erect,None,Low,High,Low,Intolerant,Moderate,160,Early Summer,20,20,30,-25,High,35,80,No,None,Yes,Slight,None,Routinely Available,Low
+117,Callicarpa americana,american beautyberry,Blue,Yes,Green,Erect,Medium,None,Medium,High,Intermediate,Moderate,175,Early Summer,6,6,14,-8,Low,35,60,No,None,Yes,None,None,Routinely Available,Low
+118,Carya aquatica,water hickory,Yellow,No,Green,Erect,None,Medium,Low,Medium,Intermediate,Moderate,200,Mid Spring,30,85,48,-18,Medium,35,70,No,None,Yes,None,None,Routinely Available,None
+119,Aesculus pavia,red buckeye,Red,Yes,Yellow-Green,Erect,Low,Medium,Medium,Low,Tolerant,Long,180,Late Spring,12,25,20,-20,High,36,65,No,None,Yes,Severe,None,No Known Source,Low
+120,Baccharis halimifolia,sea myrtle,White,Yes,Dark Green,Erect,Low,High,Low,Low,Intermediate,Moderate,180,Late Summer,10,10,20,-3,High,36,60,No,None,Yes,None,High,Routinely Available,None
+121,Alnus maritima,seaside alder,,No,Green,Erect,Low,Medium,Low,Low,Intermediate,Moderate,185,Late Summer,20,30,20,2,High,36,50,No,Medium,Yes,None,None,Routinely Available,Low
+122,Betula populifolia,gray birch,Brown,No,Green,Erect,Low,None,Medium,Medium,Intermediate,Short,90,Mid Spring,25,25,18,-35,Low,36,65,No,None,Yes,None,Medium,Routinely Available,Low
+123,Abies amabilis,pacific silver fir,Yellow,No,Gray-Green,Erect,None,None,Low,Low,Tolerant,Long,90,Late Spring,20,165,36,-28,Medium,38,260,No,None,No,None,None,Routinely Available,None
+124,Carya myristiciformis,nutmeg hickory,Yellow,No,Green,Erect,None,Low,Low,Low,Intolerant,Moderate,240,Mid Spring,30,95,48,-10,Medium,40,60,No,None,Yes,None,None,Routinely Available,None
+125,Acacia koa,koa,Yellow,No,Green,Erect,Medium,None,Medium,Medium,Intolerant,Long,365,Spring,100,110,30,31,Medium,50,200,No,High,Yes,None,None,Routinely Available,None
+126,Yucca gloriosa,Spanish Dagger,White,Yes,Green,Erect,,,,High,Tolerant,Long,,Summer,2,4,,,Medium,,,,,,,,,
+127,Leucophyllum frutescens,Texas Sage,"Blue, Lavender, White",Yes,Green,Erect,High,,,,Tolerant,Long,,Spring to Fall,,6,,,Low,,,,,Yes,,,Yes,
+128,Saintpaulia,African Violets,"Blue, pink, purple and white",Yes,Green,,,,,Low,Intermediate,,,,,,,,,,,,,,,,,
+129,Polyscias-scutellaria,Aralia,None,No,Green,Erect,,,,Medium,Intermediate,Long,,,,,,,Medium,,,,,,Slight,,Yes,
+130,Dracaena Marginata,Dragon Tree,None,No,Green,Erect,,,,,Tolerant,Long,,,,,,,Medium,,,,,,Slight,,Yes,
+131,Salvia greggii,Autumn sage,"Red, White, Pink",Yes,Green,Erect,,,,,Tolerant,Long,,Spring to Fall,3,5,,,Low,,,,,,,,,
+132,Sphaeralcea coccinea,Scarlet globemallow,"Orange, Pink",Yes,Green,Erect,High,,High,,Tolerant,Long,,Spring to Fall,3,6,,,Low,,,,,,,,Yes,
+133,Chilopsis linearis,Desert Willow,"White,
+pink or
+burgundy",Yes,Green,Erect,,,,High,Tolerant,Long,,Spring to Fall,15,20,,,Low,,,,,,,,Yes,
+134,Rosa 'Knock Out',Knock Out Rose,"Red, White, Pink",Yes,Green,Erect,,,,,,,,,4,5,,,Medium,,,,,,,,,
+135,Euphorbias,Euphorbiaceae ,,Yes,White,Erect,,,,,Intermediate,Long,,Spring-Summer,,,,,Low,,,,,,,,,
+136,Zamioculcas zamiifolia,zz Plant,None,No,Green,Erect,None,,,,Tolerant,Long,,,4,5,,30,Low,,,,,,,,Yes,
+137,Pachira aquatica,Money Tree,,,Green,Erect,None,,,,Tolerant,Long,,,,12,,40,Low,,,,,Yes,,,Yes,
+138,Howea forsteriana,Kentia Palm,,,,Erect,Low,,,,Tolerant,Long,,,,,,50,Low,,,,,,,,Yes,
+139,Dracaena fragans,Cornstalk Dracaena,"White, Pink",Yes,"Green, Yellow",Erect,Low,,,,Tolerant,Long,,Summer,,10,,65,Medium,,,,,,Low,,Yes,
+140,Ficus elastica,Rubber Fig,None,No,"Purple, Pink, Green",Erect,,,,,Tolerant,Long,,Spring-Fall,,100,,40,Low,,,,,,,,Yes,
+141,Chameadorea elegans,Parlor Palm,None,No,Green,Erect,High,,,,Intermediate,Long,,Summer-Fall,,6,,40,Low,,,,,,,,Yes,
+142,Sansevieria trifasciata,Snake Plant,None,No,"Green, Yellow",Erect,,,,,Tolerant,Long,,Spring-Winter,,5,,59,Low,,,,,,,,Yes,
+143,Ficus benjamina,Weeping Fig,None,No,Green,Erect,High,,,,Tolerant,Long,,Spring-Summer,,100,,40,Low,,,,,,,,Yes,
+144,Nephrolepis exaltata,Sword Fern,None,No,Green,Rounded,,,,High,Tolerant,Long,,Spring-Summer,2,5,,64,Low,,,,,,,,Yes,
+145,Dypsis lutescens,Areca Palm,None,No,Green,Erect,High,,,,Tolerant,Long,,Spring-Fall,,,,50,Low,,,,,,,,Yes,
+146,Monstera deliciosa,Split-leaf Philodendron,None,No,Green,Erect,,,,,Tolerant,Long,,,,,,59,,,,,,,,,Yes,
+147,Senecio rowleyanus,string of pearls,White,No,Blue-Green,Procumbent,,,,High,Tolerant,Long,,Summer,,3,,30,Low,,,,,,,,,
+148,Yucca recurvifolia,Curve-leaf Yucca,White,No,Blue-Green,Decombent,,,,High,Tolerant,Long,,Late Summer,,8,,0,Low,,,,,,,,,
+149,Sedum burrito,Burro's Tail,Pink,No,Blue-green,Procumbent,,,,High,Tolerant,Long,,Late Spring,,3,,30,Low,,,,,,,,,
+150,Sempervivum,Hens and Chicks,Pink,Yes,Blue-green,Rosette,,,,High,Tolerant,Long,,Early Summer,,0.5,,-20,Low,,,,,,,,,
+151,Dracaena marginata,Madagascar Dragon Tree,Purplish Red,Yes,Green,Erect,Low,,,,Intolerant,Long,,Summer,,,,40,Low,,,,,,,,,
+152,Phalaenopsis Grandiflora,Moth Orchid,White,No,Green,Erect,Medium,,,,Tolerant,Long,,,,,,59,Low,,,,,,,,,
+153,Ficus elastica,Rubber Fig,,,"Green, Purple",Erect,High,,,,Tolerant,Long,,Late Summer,,,,59,High,,,,,,,,,
+154,Gardenia jasminoides,Common gardenia,White,No,Green,,Medium,,,,Tolerant,Long,,Spring,,,,59,Medium,,,,,,,,,
+155,Helianthus annuus,Common sunflower,Yellow,No,Green,Erect,Medium,,,,Tolerant,Long,,Summer,,,,59,Medium,,,,,,,,,
+156,Spathiphyllum,Peace Lilly,White,No,Green,Erect,High,,,,Tolerant,Long,,Spring,,,,59,Medium,,,,,,,,,
+157,Chamaedorea elegans,Parlor Palm,,,Green,Erect,Low,,,,Intolerant,Long,,spring,,,,50,Medium,,,,,,,,,
+158,Sansevieria trifasciata,Snake plant,,,"Green, Yellow",Erect,Medium,,,,Tolerant,Long,,,,,,,,,,,,,,,,
+159,Trachelospermum jasminoides,Star Jasmine,"White, Yellow",No,Green,Spreading,Medium,,,,Tolerant,Long,,Spring,,,,45,Medium,,,,,,,,,
+160,Anthurium andraeanum,Flamingo Flower,"Red, Pink",No,Green,Erect,Medium,,,,Tolerant,Long,,spring,,,,10,Medium,,,,,,,,,
+161,Billbergia nutans,Queen's tears,"Red, Pink",No,Green,Erect,Medium,,,,Tolerant,Long,,spring,,,,40,Medium,,,,,,,,,
+162,Neoregelia carolinae,Blushing bromeliad,"Purple, Red",Yes,"Green, Yellow, Pink",Rounded,Low,,,,Tolerant,Long,,Late Spring,,,,64,Medium,,,,,,,,,
+163,Hibiscus rosa-sinensis,Hibiscus,"Red, Dark Red",No,Green,Spreading,Medium,,,,Intolerant,Long,,spring,,,,59,Medium,,,,,,,,,
+164,Begonia coccinea,Angel wing begonia,"Red, Pink",No,Green,Erect,Medium,,,,Tolerant,Long,,Summer,,,,55,Medium,,,,,,,,,
+165,Feijoa sellowiana,Pineapple Guava,"White, Red, Pink",No,Green,Erect,Low,,,,Intolerant,Long,,Summer,,,,45,Medium,,,,,,,,,
+166,Mimosa pudica,Shameplant,Pink,Yes,Green,Rounded,Low,,,,Intolerant,Long,,Summer,,,,60,Medium,,,,,,,,,
+167,Guzmania,Bromeliad,"Red, Purple",No,Green,Erect,Low,,,,Tolerant,Long,,Summer,,,,59,Medium,,,,,,,,,
+168,Liatris,Gayfeather,"Pink, Purple",No,Green,Erect,Low,,,,Tolerant,Long,,Early Spring,,,,45,Medium,,,,,,,,,
+169,Ocimum basilicum,Basil,None,No,"Green, Purple, Maroon, White",Rounded,,,,,Intermediate,Long,,,,2,1/2”,50,Low,,,,,,,,,
+170,Nepeta cataria,Catnip,Purple,Yes,"green, Purple, Maroon, White",Erect,High,,,,Intermediate,Long,,Spring-Fall,1.5,3,1/4”,45,Low,,,,,,,,,
+171,Allium schoenoprasum,Chives,Purple,Yes,"Green, Purple, Maroon, White",Erect,High,,,,Intolerant,Long,,Spring-Summer,,1.5,3/8″,45,Low,,,,,,,,,
+172,Coriandrum sativum,Cilantro,White,Yes,"Green, Purple, Maroon, White",Erect,High,,,,Tolerant,Long,,Summer,,3,3/8”,50,Low,,,,,,,,,
+173,Anethum graveolens,Dill,Yellow,Yes,Green,Erect,High,,,,Intolerant,Long,,Summer,3,4,3/8”,45,Low,,,,,,,,,
+174,Lavendula angustifolia,Lavender,Purple,Yes,Green,Erect,High,,,,Intermediate,Long,,Spring-Summer,,3,1/2”,59,Low,,,,,,,,,
+175,Mentha hybrids,Mint,,,Green,Erect,High,,,,Tolerant,Long,,Spring-Summer,,2,1/4”,50,Low,,,,,,,,,
+176,Origanum vulgare,Oregano,"Purple, Pin, White",No,Green,Erect,High,,,,Intolerant,Long,,Spring-Summer,,2,3/8”,45,Low,,,,,,,,,
+177,Petroselinum crispum,Parsley,"White,Pink",No,Green,Spreading,High,,,,Tolerant,Long,,Spring-Summer,,2,1/8”,59,Low,,,,,,,,,
+178,Rosmarinus officinalis,Rosemary,Purple ,No,Green,Spreading,High,,,,Intermediate,Long,,Spring-Winter,,6,1/8″,50,Low,,,,,,,,,
+179,Salvia officinalis,Sage,Purple,No,Green,Spreading,High,,,,Intermediate,Long,,Spring-Fall,,4,1/8”,50,Low,,,,,,,,,
+180,Stevia rebaudiana,Stevia,White ,No,Green,Spreading,High,,,,Intermediate,Long,,Fall,,3,1/4”,59,Low,,,,,,,,,
+181,Thymus vulgaris,Thyme,Pink,Yes,Green,Spreading,High,,,,Intermediate,Long,,,,2,N/A,45,Low,,,,,,,,,
+182,Citrus x sinensis,Orange,White,Yes,Green,Erect,,,,,Intolerant,Long,Intolerant,Winter to Spring,,30,,30,High,,,,,,,,,
+183,Citrus limon,Lemon,White,Yes,Green,Erect,,,,,Intolerant,Long,Intolerant,Winter to Spring,,9,,45,High,,,,,,,,,
+184,Solanum lycopersicum,Tomato,Yellow,Yes,Green,Decumbent,,,,,Intolerant,Annual,Intolerant,June to Sept,,6,,50,High,,,,,,,,,
+185,Fragaria x ananassa,Strawberry,White,Yes,Green,,,,,,Intermediate,Perennial,,May to July,,1,,28,High,,,,,,,,,
+186,Rubus idaeus,Raspberry,White,Yes,Green,Erect,,,,,Intermediate,Perennial,,Spring,,7,,-20,High,,,,,,,,,
+187,Vaccinium corymbosum,Blueberry,White,Yes,Green,Rounded,,,,,Intermediate,Perennial,,Spring,,6,,-10,High,,,,,,,,,
+188,Ficus carica,Fig,White,Yes,Green,Erect,,,,High,Intermediate,Long,,Spring,,30,,5,High,,,,,,,,,
+189,Actinidia deliciosa,Kiwi,White,Yes,Green,Climbing vine,,,,,Intermediate,Long,180,July to Aug,,30,,10,High,,,,,,,,,
+190,Daucus carota sativus,Carrot,White,Yes,Green,Erect,,,,,Intermediate,Biennial,,June to Aug,,4,,38,Medium,,,,,,,,,
+191,Lactuca sativa,Lettuce,Yellow,Yes,Green,Rounded,,,,,Intermediate,Short,,July to Aug,,3,,45,Medium,,,,,,,,,
+192,Cucumis sativus,Cucumber,Yellow,Yes,Green,Creeping vine,,,,,Intolerant,Short,,July to Sept,,6,,60,High,,,,,,,,,
+193,Spinacia oleracea,Spinach,Yellow-Green,No,Green,Erect,,,,,Intermediate,Short,,Jun to Sept,,1,,16,Medium,,,,,,,,,
+194,Raphanus raphanistrum sativus,Radish,Purple,Yes,Green,Erect,,,,Low,Intermediate,Short,,Jun to Aug,,1.5,,26,High,,,,,,,,,
+195,Brassica oleracea,Cabbage,Yellow or White,Yes,Green,Erect,,,,,Intermediate,Biennial,,May to Aug,,2.5,,39,Medium,,,,,,,,,
+196,Brassica oleracea,Broccoli,Yellow,Yes,Green,Erect,,,,,Intermediate,Biennial,,May to Aug,,3,,2,Medium,,,,,,,,,
+197,Capsicum annuum,Bell Pepper,White,Yes,Green,Erect,,,,,Intolerant,Perennial,,Jul to Sept,,3,,55,High,,,,,,,,,
+198,Pisum sativum,Peas,White,Yes,Green,Creeping vine,,,,,Intolerant,Short,,May to Sept,,6.5,,19,Medium,,,,,,,,,
+199,Ipomoea batatas,Sweet Potato,White and purple,Yes,Green,Vine,,,,,Intolerant,Perennial,,Summer,,10,,75,High,20,,,,,,,,
+200,Prunus avium,Cherry,White,Yes,Green,Erect,,,,,Intermediate,Long,,Apr to Aug,,75,,0,High,,,,,,,,,
+201,Ananas comosus,Pineapple,Lavender to red,Yes,Green,Erect,,,,High,Intermediate,Perennial,,Apr to May,,3,,50,Medium,,,,,,,,,
+202,Citrus japonica,Kumquat,White,Yes,Green,Rounded,,,,,Intermediate,Perennial,,Winter to Spring,,8,,23,High,,,,,,,,,
